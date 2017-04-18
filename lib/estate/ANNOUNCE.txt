@@ -1,0 +1,44 @@
+ESTate - EST Analysis Tools Etc. First Release.
+
+---------------------------------------
+ESTate 0.5.0 First Release Announcement
+---------------------------------------
+
+The first public release of ESTate is now available.
+ESTate is a package of Expressed Sequence Tag Analysis Tools Etc.
+
+It may be downloaded from:
+
+    http://www.hgmp.mrc.ac.uk/~gslater/ESTate/
+
+Functionality includes:
+
+    o EST clustering
+
+      Rapid comparisons using finite state machines are combined
+      with accurate comparisons from dynamic programming,
+      by a graph theoretic approach to produce an anytime algorithm
+      for EST clustering.
+
+
+    o Consensus Translation
+
+      An method for prediction of the translation implied by EST
+      consensi, based on the use of multiple dynamic programming
+      models and various strategies to achieve error tolerance.
+
+    o Some experimental tools for database searching.
+
+All the programs are implemented in C, and have
+been tested under Linux, IRIX, Solaris and AIX.
+
+The source code is provided under the terms of
+the GNU public licence.
+
+Documentation is available from the URL above,
+and is also included in the package.
+
+All feedback is appreciated.
+
+Guy.
+--
