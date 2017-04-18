@@ -1,0 +1,74 @@
+.\" Header used on every estate page.
+.TH ESTate 1 "October 1999" ESTate "EST analysis tools, etc"
+.SH NAME
+.\"
+flat2coding \- Extract coding sequences from a EMBL/GenBank database.
+.SH SYNOPSIS
+.B flat2coding
+[ -hvc ] [ -do ] <EMBL/GenBank flat file>
+.SH DESCRIPTION
+.BR flat2coding
+parses the annotations and feature table from a EMBL or GenBank
+format sequence database, to reconstruct coding sequences.
+The coding sequences are written to
+.I stdout
+in FASTA format.
+
+Sequences annotated as being hypothetical, organelle derived,
+partial, potential, or putative are discarded.  Any sequences
+containing ambiguity codes or not starting with an initiation
+codon and ending with an in-frame stop codon are considered
+to be poor quality, and are also discarded.
+
+.SH OPTIONS
+.\"
+.TP
+.BI "\-d \--database " sequence-database
+Specify the EMBL or GenBank format sequence database.
+.\"
+.TP
+.BI "\-o \--organism " organism-name
+Name of the organism
+.I exactly
+as it appears in the database on the OS line in EMBL
+annotation or the ORGANISM line in GenBank annotations.
+.\"
+.SH EXAMPLES
+.\"
+.B "flat2coding \-o 'Homo sapiens (human)' \-d embl_hum.dat "
+.B "> coding.fasta"
+.RS
+Extract coding sequences from
+.IR embl_hum ,
+and writes them to
+.IR coding.fasta .
+This is often used prior to calculation
+codon or hexamer frequency statistics, with
+.BR "fasta2usage(1)" .
+.RE
+.\"
+.\" Misc information appended to the end of Every ESTate man page.
+.\"
+.RE
+.SH VERSION
+This documentation accompanies version 0.5.0 of the ESTate package.
+.SH AUTHOR
+Guy St.C. Slater.  <gslater@hgmp.mrc.ac.uk>
+.SH AVAILABILITY
+This source code for the ESTate package will be made
+available under the terms of the GNU public licence.  Please
+see the file COPYING which was distrubuted with this package,
+or http://www.fsf.org/copyleft/gpl.html for details.
+
+Please see http://www.hgmp.mrc.ac.uk/~gslater/ESTate/
+for more information about the ESTate package.
+.SH "SEE ALSO"
+.BR calcwordprob (1),
+.BR estcluster (1),
+.BR ESTate (7),
+.BR fasta2usage (1),
+.BR flat2coding (1),
+.BR framefinder (1),
+.BR precluster (1),
+.BR vpbuild (1)
+.BR vpsearch (1)

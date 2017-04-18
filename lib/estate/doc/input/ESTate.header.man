@@ -1,0 +1,3 @@
+.\" Header used on every estate page.
+.TH ESTate 1 "October 1999" ESTate "EST analysis tools, etc"
+.SH NAME

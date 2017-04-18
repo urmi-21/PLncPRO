@@ -1,0 +1,107 @@
+# -------------------------------------------------------------------
+# Sample configuration file for the ESTate package.
+# -------------------------------------------------------------------
+#
+# The format is very similar that of the
+# setting of shell script environment variables.
+#
+# All the options are commented out.
+# Remove the comment character and set the value to use them.
+
+ESTATE_ROOT="${HOME}/checkout/estate"
+
+# ===================================================================
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# ===================================================================
+
+# -------------------------------------------------------------------
+# OPTIONS FOR precluster
+#
+# PRECLUSTER_USE_VFSM="TRUE"
+# PRECLUSTER_DATABASE_PATH="${ESTATE_ROOT}/example/estsmall.fasta"
+# PRECLUSTER_DATABASE_PATH="${ESTATE_ROOT}/example/estsmall.fasta"
+# PRECLUSTER_WORD_LENGTH="9"
+# PRECLUSTER_WORD_MINIMUM="24"
+# PRECLUSTER_AVARESULT_PATH="${ESTATE_ROOT}/test.ava"
+# PRECLUSTER_AVARESULT_REVCOMP_PATH="${ESTATE_ROOT}/test.avarc"
+# PRECLUSTER_AVARESULT_REVCOMP_PATH="${ESTATE_ROOT}/test.avarc"
+# PRECLUSTER_AVARESULT_REVCOMP="TRUE"
+
+# -------------------------------------------------------------------
+# OPTIONS FOR estcluster
+#
+# ESTCLUSTER_DATABASE_PATH="${PRECLUSTER_DATABASE_PATH}"
+# ESTCLUSTER_ALLVSALL_PATH="${PRECLUSTER_AVARESULT_PATH}"
+# ESTCLUSTER_ALLVSALL_REVCOMP_PATH="${PRECLUSTER_AVARESULT_REVCOMP_PATH}"
+# ESTCLUSTER_SUBMAT="nucleic"
+# ESTCLUSTER_ANYTIME_COUNT="5"
+# ESTCLUSTER_HISTORY_COUNT="5000"
+# ESTCLUSTER_THINKALOUD="FALSE"
+# ESTCLUSTER_SHOWALIGNMENTS="FALSE"
+# ESTCLUSTER_SHOWHISTOGRAM="TRUE"
+# ESTCLUSTER_GAPOPEN="-12"
+# ESTCLUSTER_GAPEXTEND="-8"
+# ESTCLUSTER_REPORTONBREAK="TRUE"
+# ESTCLUSTER_JOINTHRESHOLD="750"
+# ESTCLUSTER_OUTPUTDIR="${ESTATE_ROOT}/est.clusters"
+# ESTCLUSTER_REVCOMP="TRUE"
+
+# ===================================================================
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# ===================================================================
+
+# -------------------------------------------------------------------
+# OPTIONS FOR flat2coding
+#
+# FLAT2CODING_DATABASE="${ESTATE_ROOT}/hum1.dat"
+# FLAT2CODING_ORGANISM="Homo sapiens (human)"
+
+# -------------------------------------------------------------------
+# OPTIONS FOR fasta2usage
+#
+# FASTA2USAGE_DATABASE="${ESTATE_ROOT}/coding.fasta"
+# FASTA2USAGE_WORDLEN="3"
+# FASTA2USAGE_JUMP="3"
+# FASTA2USAGE_FORCEDICT="FALSE"
+# FASTA2USAGE_ALPHABET="ACGT"
+
+# -------------------------------------------------------------------
+# OPTIONS FOR calcwordprob
+#
+# CALCWORDPROB_WORDCOUNT=${ESTATE_ROOT}/example/embl.wordcount
+
+# -------------------------------------------------------------------
+# OPTIONS FOR framefinder
+#
+# FRAMEFINDER_WORDPROB="${ESTATE_ROOT}/example/embl59.wordprob"
+# FRAMEFINDER_DATABASE="${ESTATE_ROOT}/example/estsmall.fasta"
+# FRAMEFINDER_THINKALOUD="FALSE"
+# FRAMEFINDER_TRYREVCOMP="TRUE"
+# FRAMEFINDER_TRYSTRICTLOCAL="TRUE"
+# FRAMEFINDER_FSPEN="-24.0"
+# FRAMEFINDER_INSPEN="-2.0"
+# FRAMEFINDER_DELPEN="-2.0"
+# FRAMEFINDER_OPENBONUS="-12.0"
+
+# ===================================================================
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# ===================================================================
+
+# -------------------------------------------------------------------
+# OPTIONS FOR vpbuild
+#
+# VPBUILD_DATABASE="${ESTATE_ROOT}/example/estsmall.fasta"
+# VPBUILD_INDEX="${ESTATE_ROOT}/estsmall.vpt"
+# VPBUILD_METRIC="edit"
+# VPBUILD_WORDLEN="0"
+
+# -------------------------------------------------------------------
+# OPTIONS FOR vpsearch
+#
+# VPBUILD_INDEX="${VPBUILD_INDEX}"
+# VPBUILD_QUERY="${ESTATE_ROOT}/test.fasta"
+
+# ===================================================================
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# ===================================================================
+# --

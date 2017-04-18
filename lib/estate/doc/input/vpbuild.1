@@ -1,0 +1,58 @@
+.\"
+vpbuild \- build vptree for sublinear time searching
+.SH SYNOPSIS
+.B vpbuild
+[ -hvc ] [ -dimw ]
+<fasta format DNA sequences> <output path for index> <metric name>
+.SH DESCRIPTION
+.BR vpbuild
+builds a vantage-point tree for sublinear time database
+searching with
+.B vpsearch (1)
+
+See the man page for
+.B vpsearch (1)
+for more information.
+.RE
+.SH OPTIONS
+.\"
+.TP
+.BI "\-d \--database " sequence-database
+Specify the FASTA format input file.
+This may contain either protein of DNA sequences.
+An absolute path must be supplied.
+.\"
+.TP
+.BI "\-i \--index " index-path
+Specify path into which the index should
+be written.  A directory is created, into which
+the vantage point tree is written, with a link
+to the original sequence data, and a file
+containing information about the metric used.
+If the path already exists, '_update' is appended
+to the path before the directory is written.
+.\"
+.TP
+.BI "\-m \--metric " metric
+specify the metric to use for pairwise
+comparison.  This can either be the
+.B edit
+distance between
+the sequences, or a
+.B word
+based metric.
+.\"
+.TP
+.BI "\-w \--wordlen " word-length
+If the word-based metric is used, this option can
+be used to specify the word length which will be used.
+.\"
+.SH EXAMPLES
+.\"
+.B "vpbuild -d test.fasta -i test.index -m edit"
+.RS
+This will run vpbuild on test.fasta, generating a vptree in
+the directory test.index, using edit distance as the comparison
+metric.
+.RE
+.\"

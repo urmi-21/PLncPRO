@@ -1,0 +1,93 @@
+.\" Header used on every estate page.
+.TH ESTate 1 "October 1999" ESTate "EST analysis tools, etc"
+.SH NAME
+.\"
+ESTate \- Expressed Sequence Tag Analysis Tools, etc.
+.SH DESCRIPTION
+.BR ESTate
+is a set of tools for
+.IR E xpressed
+.IR S equence
+.IR T ag
+.IR A nalysis
+.IR e tc.
+Designed to perform a number of tasks required in the analysis
+of ESTs, such as sequence comparison, database searching,
+clustering, and translation.  For information about specific tools,
+see their individual man pages.
+.SH OPTIONS
+Options which man be used with all tools are described here,
+other options are described in the man pages for the tools which
+use them.
+.\"
+.TP
+.B "\-h \--help"
+Display information on the available command line options
+for the tool being used.  This option will show a name
+which may be used to set a default for this parameter either
+as an environment variable, or in the configuration file described
+below.
+
+It will also the value which is currently being used for
+this value, whether it has been specified on the command line,
+as an environment variable, in the configuration file, or is
+just the hard coded default.
+.\"
+.TP
+.B "\-v \--version"
+Print the version number of the ESTate release being used,
+and exit.
+.\"
+.TP
+.BI "\-c \--config " config-file
+Specify a directory containing the config file,
+.IR .ESTaterc
+
+If this is not specified, the program will look in the
+the directory specified by $ESTATECONFIGDIR,
+the current directory, then $HOME, then the directory containing
+the executable, and finally in ${ESTate}/etc.  If a config
+file is not found, a warning message is printed.
+.\"
+.SH FILES
+.I .ESTaterc
+.RS
+The configuration file described above.  You should receive
+an example configuration file with this package.
+.RE
+.SH ENVIRONMENT
+.I $ESTATECONFIGDIR
+.RS
+When set, all programs will look for the
+.I .ESTate.rc
+file in the directory specified by this environment variable.
+.RE
+.SH BUGS
+There are bound to be some (after all, I'm a biochemist,
+not a computer scientist by training ;)
+Anyway, please let me know when you find bugs.
+.\" Misc information appended to the end of Every ESTate man page.
+.\"
+.RE
+.SH VERSION
+This documentation accompanies version 0.5.0 of the ESTate package.
+.SH AUTHOR
+Guy St.C. Slater.  <gslater@hgmp.mrc.ac.uk>
+.SH AVAILABILITY
+This source code for the ESTate package will be made
+available under the terms of the GNU public licence.  Please
+see the file COPYING which was distrubuted with this package,
+or http://www.fsf.org/copyleft/gpl.html for details.
+
+Please see http://www.hgmp.mrc.ac.uk/~gslater/ESTate/
+for more information about the ESTate package.
+.SH "SEE ALSO"
+.BR calcwordprob (1),
+.BR estcluster (1),
+.BR ESTate (7),
+.BR fasta2usage (1),
+.BR flat2coding (1),
+.BR framefinder (1),
+.BR precluster (1),
+.BR vpbuild (1)
+.BR vpsearch (1)

@@ -1,0 +1,95 @@
+.\"
+framefinder \- error tolerant DNA sequence framefinding
+.SH SYNOPSIS
+.B framefinder
+[ -hvc ] [ -wdtrsFIDO ] <fasta format DNA sequences>
+.SH DESCRIPTION
+.BR framefinder
+is a error-tolerant framefinding program.
+Log odds hexamer frequency statistics and multiple dynamic
+programming frameshift models are used to predict the extend
+and reading frame of coding sequence from EST derived consensus
+sequences.  Error tolerance is achieved by the use of an ambiguity
+tolerant translation model and context dependent frameshift
+penalties.
+
+.PP
+Two models are currently used within framefinder:
+.PP
+.RS
+.IR "A local model",
+in which an optimally scoring local path is found through the
+reading frames of the sequences.
+.RE
+
+.RS
+.IR "A strict model",
+which is similar to the local model, but a reading frame can
+only be opened when an open codon is encountered, and must be closed
+when an in-frame stop codon if encountered
+(or a frameshift must be incurred to avoid it).
+.RE
+
+.SH OPTIONS
+.\"
+.TP
+.BI "\-w \--wordprob " wordprob-file
+Specify the word probability file.
+.\"
+.TP
+.BI "\-d \--database " sequence-database
+Specify the FASTA format input file, which may contain
+single or multiple sequences.
+.\"
+.TP
+.BI "\-t \--thinkaloud " boolean
+Show information related to probabilities,
+scores, translation and frame selection.
+This option is for debugging only.
+.\"
+.TP
+.BI "\-r \--tryrevcomp " boolean
+Specify whether the reverse complement
+of the sequence is searched for candidate
+translations in addition to the forward sequence.
+.\"
+.TP
+.BI "\-t \--trystrictlocal " boolean
+Specify whether a strict local model should be used to
+search the sequence for translations before the more relaxed
+local model.
+.\"
+.TP
+.BI "\-F \--fspen " frameshift-penalty
+Specify the frameshift penalty which should be used.
+.\"
+.TP
+.BI "\-I \--inspen " insertion-penalty
+Specify the insertion penalty which should be used.
+.\"
+.TP
+.BI "\-D \--delpen " delpen-penalty
+Specify the deletion penalty which should be used.
+.\"
+.TP
+.BI "\-O \--openbonus" frame-open-bonus
+In the strict local model, the frame open bonus is added to
+the score when a candidate reading frame is opened.  This
+is to compensate for that fact that corresponding codons
+or hexamers occur infrequently in coding sequences as a whole
+relative to the frequency of their occurence at frame openings.
+
+Additionally, this bonus facilitates selection of the
+strict model over the local model when similar scores are
+generated, allowing for more accurate prediction of the
+reading frame ends.
+
+.SH EXAMPLES
+.\"
+.B "framefinder -w etc/embl59.wordprob calm.dna.fasta > calm.predicted_protein.fasta"
+.RS
+This will use the default parameters, and the embl59 word probablity
+file distributed with the packages to predict the translation from
+the calm.dna.fasta sequence file.
+.RE
+.\"

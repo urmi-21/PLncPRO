@@ -1,0 +1,112 @@
+.\" Header used on every estate page.
+.TH ESTate 1 "October 1999" ESTate "EST analysis tools, etc"
+.SH NAME
+.\"
+fasta2usage \- Calculate word usage counts from FASTA format sequences.
+.SH SYNOPSIS
+.B fasta2usage
+[ -hvc ] [ -dwjfa ] <fasta format sequences>
+.SH DESCRIPTION
+.BR fasta2usage
+counts the word usage within a FASTA format input file.
+The output is written to
+.IR stdout .
+
+Different algorithms are used depending on the word length
+and alphabet specified: a simple table lookup approach
+is used for wordlengths of 1 or 2,
+a VFSM (
+.IR V irtual
+.IR F inite
+.IR S tate
+.IR M achine
+) for longer wordlengths, enabling word counting in
+linear time.
+
+If the word space is too large
+to be represented in memory, then a slower algorithm
+is used, using an adaptive trie base dictionary.
+However, this algorithm
+is quite memory efficient, and will allow counting of
+frequencies of very long words from sets of large input
+sequences.
+.SH OPTIONS
+.\"
+.TP
+.BI "\-d \--database " sequence-database
+Specify the FASTA format input sequence database.
+This can be a protein or nucleotide database containing
+single or multiple sequences.
+.\"
+.TP
+.BI "\-w \--wordlen " wordlength
+Set the length of words to be counted.
+.\"
+.TP
+.BI "\-j \--jump " jumplength
+Set the length to jump between consecutive words.  This will
+be
+.BR 1
+when calculating composition, and
+.BR 3
+when calculating codon usage.
+See examples below for more information.
+.\"
+.TP
+.B "\-f \--forcedict"
+Force the use of of the trie based dictionary for word counting.
+This should be specified to make the program more conservative
+on memory than time.
+.\"
+.TP
+.BI "\-a \--alphabet " alphabet
+This specifies the string characters of the alphabet to count.
+Any words containing other characters are ignored.  This will
+normally be a string such as
+.IR "'ACGT'" ,
+but if the string,
+.IR "'protein'"
+is used, it will be interpreted as an alias for the string,
+.IR "'ARNDCQEGHILKMFPSTWYV'" .
+.\"
+.SH EXAMPLES
+.\"
+.B "fasta2usage \-d sp.fasta -a protein > sp.composition"
+.RS
+Calculate the composition in
+.IR sp.fasta .
+.RE
+.\"
+.TP
+.B "fasta2usage -w 6 -j 3 \-d coding.fasta > coding.wordcount"
+Calculate the hexamer usage from the file
+.IR coding.fasta .
+The output file,
+.IR coding.wordcount
+can be used as input for
+.BR "calcwordprob (1)".
+.\" Misc information appended to the end of Every ESTate man page.
+.\"
+.RE
+.SH VERSION
+This documentation accompanies version 0.5.0 of the ESTate package.
+.SH AUTHOR
+Guy St.C. Slater.  <gslater@hgmp.mrc.ac.uk>
+.SH AVAILABILITY
+This source code for the ESTate package will be made
+available under the terms of the GNU public licence.  Please
+see the file COPYING which was distrubuted with this package,
+or http://www.fsf.org/copyleft/gpl.html for details.
+
+Please see http://www.hgmp.mrc.ac.uk/~gslater/ESTate/
+for more information about the ESTate package.
+.SH "SEE ALSO"
+.BR calcwordprob (1),
+.BR estcluster (1),
+.BR ESTate (7),
+.BR fasta2usage (1),
+.BR flat2coding (1),
+.BR framefinder (1),
+.BR precluster (1),
+.BR vpbuild (1)
+.BR vpsearch (1)

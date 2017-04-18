@@ -1,0 +1,25 @@
+.\" Misc information appended to the end of Every ESTate man page.
+.\"
+.RE
+.SH VERSION
+This documentation accompanies version 0.5.0 of the ESTate package.
+.SH AUTHOR
+Guy St.C. Slater.  <gslater@hgmp.mrc.ac.uk>
+.SH AVAILABILITY
+This source code for the ESTate package will be made
+available under the terms of the GNU public licence.  Please
+see the file COPYING which was distrubuted with this package,
+or http://www.fsf.org/copyleft/gpl.html for details.
+
+Please see http://www.hgmp.mrc.ac.uk/~gslater/ESTate/
+for more information about the ESTate package.
+.SH "SEE ALSO"
+.BR calcwordprob (1),
+.BR estcluster (1),
+.BR ESTate (7),
+.BR fasta2usage (1),
+.BR flat2coding (1),
+.BR framefinder (1),
+.BR precluster (1),
+.BR vpbuild (1)
+.BR vpsearch (1)

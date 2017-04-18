@@ -1,0 +1,110 @@
+.\" Header used on every estate page.
+.TH ESTate 1 "October 1999" ESTate "EST analysis tools, etc"
+.SH NAME
+.\"
+precluster \- word scoring step prior to EST clustering.
+.SH SYNOPSIS
+.B precluster
+[ -hvc ] [ -VdwmARr ] <fasta database path> <allvsall results path>
+.SH DESCRIPTION
+.BR precluster
+employs VFSMs (
+.IR V irtual
+.IR F inite
+.IR S tate
+.IR M achines
+) and an efficient word matching algorithm
+to enable all-against-all matching in of a group of sequences
+in subquadratic time.
+
+The scores generated are simply the number of matching words
+between sequences.  The results (which may be large)
+are written out in a compressed binary format,
+and can later be used by for EST clustering by
+the program
+.B estcluster (1)
+
+.RE
+.SH OPTIONS
+.\"
+.TP
+.BI "\-V \--vfsm " boolean
+The VFSM optimisation is used as a default.  This option,
+allows this to be turned off, and a quadratic time method
+which matches words with Aho and Corasick type FSMs will be
+used instead.  This will be
+.I much much
+slower, (this can take days, instead of minutes).
+
+The VFSM optimisation should only be turned off when using a
+prohibitively large word length, or when demonstration
+of identical results from both methods is required.
+.\"
+.TP
+.BI "\-d \--database " sequence-database
+Specify the FASTA format input file.  It is expected that
+low complexity and highly repetitive sequences will have been masked,
+as this will slow down and reduce the quality of the clustering.
+.\"
+.TP
+.BI "\-w \--wordlen " word-length
+The length of words searched for between sequences.
+.\"
+.TP
+.BI "\-m \--wordmin " minimum-word-count
+This option specifies the minimum number of matching words
+required between two sequences before a matching score is reported.
+This will both reduce the size of the results files, and speed
+up the execution.
+.\"
+.TP
+.BI "\-A \--allvsall " allvsall-results-path
+This allows for the path to be specified for results of matching
+words between sequences in the same orientation.
+.\"
+.TP
+.BI "\-R \--allvsallrc " revcomp-results-path
+This allows for the path to be specified for results of matching
+words sequences where one of which is in the reverse complement.
+.\"
+.TP
+.BI "\-r \--revcomp " boolean
+Specify whether word matches should be searched for in the
+reverse complement.  The default is to TRUE; this option is
+only left in for analysis and debugging.
+.\"
+
+.SH EXAMPLES
+.\"
+.B "precluster -d lib01.fasta -A lib01.avafw -R lib01.avarc"
+.RS
+This will run precluster using the defaults, using the sequences
+in lib01.fasta as input.  Results will be written to lib01.avafw
+and lib01.avarc.
+.RE
+.\"
+.\" Misc information appended to the end of Every ESTate man page.
+.\"
+.RE
+.SH VERSION
+This documentation accompanies version 0.5.0 of the ESTate package.
+.SH AUTHOR
+Guy St.C. Slater.  <gslater@hgmp.mrc.ac.uk>
+.SH AVAILABILITY
+This source code for the ESTate package will be made
+available under the terms of the GNU public licence.  Please
+see the file COPYING which was distrubuted with this package,
+or http://www.fsf.org/copyleft/gpl.html for details.
+
+Please see http://www.hgmp.mrc.ac.uk/~gslater/ESTate/
+for more information about the ESTate package.
+.SH "SEE ALSO"
+.BR calcwordprob (1),
+.BR estcluster (1),
+.BR ESTate (7),
+.BR fasta2usage (1),
+.BR flat2coding (1),
+.BR framefinder (1),
+.BR precluster (1),
+.BR vpbuild (1)
+.BR vpsearch (1)
