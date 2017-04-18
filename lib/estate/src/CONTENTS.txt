@@ -1,0 +1,67 @@
+---------------------------------------------
+Description of the ESTate source code modules.
+---------------------------------------------
+
+cluster - sequence clustering code
+----------------------------------
+    avastore : Read/write results of allvsall comparison on disk.
+  clusterset : Weight-balanced, path-compressed union-find algorithm.
+   wordgraph : Efficient wordbased allvsall sequence comparison.
+
+dynamic - dynamic programming routines
+--------------------------------------
+      affine : Affine gap penalty implementations   O(nm)
+    editdist : Edit distance calculation routines.
+      submat : Substitution matrix routines.
+
+general - code required for building every program.
+---------------------------------------------------
+         arg : Flexible command line interpretation code.
+    common.h : General globally shared definitions.
+      config : Location and parsing of runtime configuration data.
+        dict : Fast adaptive trie dictionary data structure.
+       error : Error message handling.
+      string : Basic string data structure.
+  stringlist : Basic list of strings data structure.
+
+metric - sequence metric related code
+-------------------------------------
+      metric : pairwise metric comparison functions
+      vptree : vantage point tree implementation
+
+parse - parsers for various format files.
+-----------------------------------------
+      ioutil : Various io utilities.
+  parsedbest : Concise dbEST database parser.
+      parser : Basic line based parsing functions.
+  parseseqdb : Parser for EMBL, GenBank and SwissProt.
+     rafasta : Fasta format database reading code (random access).
+   readfasta : Fast fasta format database reading code (sequential).
+
+program - specific code for each program.
+----------------------------------------
+ alignsearch : Dynamic programming based database searching.
+calcwordprob : Calculate word usage log odds probabililtys (inc. Ns).
+  estcluster : Rapid and accurate EST clustering.
+ fasta2usage : Count word usage in a set of sequences.
+ flat2coding : Extract high quality coding sequences from database.
+ framefinder : Error/low quality tolerant translation algorithm.
+  precluster : All-vs-All wordgraph generation.
+     revcomp : Generate reverse complement of nucleotide sequences.
+   translate : Translate sequences in six frames.
+     vpbuild : Build a vantage point tree from a fasta database
+    vpsearch : Search a fasta database using a vantage point tree
+  wordsearch : Test program (finds dictionary words in sequences).
+
+sequence - sequence manipulation libraries
+------------------------------------------
+        ntaa : Nucleotide and peptite translation and ambiguity code.
+     sequtil : Various sequence based functions.
+
+struct - general data structure based modules.
+----------------------------------------------
+         fsm : Efficient finite state machine routines.
+        list : Simple queue and stack based linked list.
+      pqueue : Priority queue implementation (leftist trees).
+        vfsm : Virtual finite state machine routines.
+--
