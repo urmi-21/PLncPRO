@@ -1,0 +1,1226 @@
+IDENTIFIERS
+dbEST Id:	1000000
+EST name:       EST67598
+GenBank Acc:    AA358621
+GenBank gi:	2011011
+
+CLONE INFO
+Clone Id:	 (3' end)
+Source:         ATCC
+Id in host:	162813
+Other ESTs on clone: EST67599 THC179990
+DNA type:	cDNA
+
+PRIMERS
+Sequencing:     M13-21
+
+SEQUENCE 
+		GTACCAATCTTTATGTATTTATTCACACATTTGATAAAAATGTCACAGTTAGGAGTGAAA
+		TCATTACAATGACATGAGTAACTGTACAGACAGACCCCAAGTGCAGAATCAAATTGCCCT
+		AAGTCAGAACATGGAGCAACCGCAACTCCTTCGCACTTGTGCATGTGTGTGCGCTCGCAG
+		ACGCACACACACACACACATATTCTCTCTCTCTCTTATGCACACATCCATCCACATCCCA
+		ACAATTGCAGGTGCTAAGTTTGGACATAACCCAGGGACTNCTCCCTGACTTCTGTCAGGT
+		CCTGGGAAAGAAGAAGTAATAAATGAAAAGCAGCTGGGACTNCTTCGATGGCATCTCTCC
+		TCTTCCAACAATGACG
+
+Entry Created:	Apr 21 1997 
+Last Updated:	Apr 21 1997 
+
+COMMENTS
+                For clone availability, additional sequence and expression
+                information related to this EST, please check the TIGR Human
+                Gene Index (http://www.tigr.org/tdb/hgi/hgi.html)
+
+LIBRARY
+dbEST lib id:	748
+Lib Name:       Fetal lung II
+Organism:       Homo sapiens
+Sex:            male
+Organ:          lung
+Develop. stage: fetus, 19 wks
+Vector:         pBluescript SK-
+R. Site 1:      EcoRI
+R. Site 2:      XhoI
+
+SUBMITTER
+Name:           Kerlavage, AR
+Lab:            Bioinformatics
+Institution:    The Institute for Genomic Research
+Address:        9712 Medical Center Drive, Rockville, MD 20850 USA
+Tel:		3018699056
+Fax:		3018699423
+E-mail:		arkerlav@tigr.org
+
+CITATIONS
+Medline UID:	94004965
+Title:          Rapid cDNA sequencing (expressed sequence tags) from a
+                directionally cloned human infant brain cDNA library
+Authors:        Adams,M.D., Soares,M.B., Kerlavage,A.R., Fields,C.,
+                Venter,J.C.
+Citation:	Nature Genet. 4: 373-380 1993
+
+MAP DATA
+
+NEIGHBORS
+
+Top 15 protein matches
+
+Neighbor:       gi|762831 (L39790) fibrillin 2 [Mus musculus]
+                gi|2137288|pir||A57278 fibrillin-2 precursor - mouse
+Pvalue:		3.798e-07
+
+||
+IDENTIFIERS
+dbEST Id:	1000001
+EST name:       EST67599
+GenBank Acc:    AA358622
+GenBank gi:	2011012
+
+CLONE INFO
+Clone Id:	 (5' end)
+Source:         ATCC
+Id in host:	162813
+Other ESTs on clone: EST67598 THC179990
+DNA type:	cDNA
+
+PRIMERS
+Sequencing:     M13 Reverse
+
+SEQUENCE
+		AAAACAACATGATGGTGTTGGTGTCGCGTGCTGTGGAGCATCCGAGTGTGCCAGAGTCTC
+		CAGAATTCGTCAGGGTCAGATCATATGAATCCCAAATGGTTATCCGTCCCCACAAGTCAT
+		TTGATGAGAATGGCTTTGACTACTTACTAACATACAGTGACAATCCCCAAACGGTGTTTC
+		CTCGCTACTGTGTTAGTTGGATGGTTTCCAGTGGCATGCCAGATTTCCTGGAGAAGCTGC
+		ACATGGCCACTCTGAAAGCCAAGAATATGGAGATTAAAGTAAAGGACTACATCTCAGCTA
+		AGCCTCTGGAAATGAGTAGTGAAGCCAAGGCCACCAGCCAGT
+
+Entry Created:	Apr 21 1997 
+Last Updated:	Apr 21 1997 
+
+COMMENTS
+                For clone availability, additional sequence and expression
+                information related to this EST, please check the TIGR Human
+                Gene Index (http://www.tigr.org/tdb/hgi/hgi.html)
+
+LIBRARY
+dbEST lib id:	748
+Lib Name:       Fetal lung II
+Organism:       Homo sapiens
+Sex:            male
+Organ:          lung
+Develop. stage: fetus, 19 wks
+Vector:         pBluescript SK-
+R. Site 1:      EcoRI
+R. Site 2:      XhoI
+
+SUBMITTER
+Name:           Kerlavage, AR
+Lab:            Bioinformatics
+Institution:    The Institute for Genomic Research
+Address:        9712 Medical Center Drive, Rockville, MD 20850 USA
+Tel:		3018699056
+Fax:		3018699423
+E-mail:		arkerlav@tigr.org
+
+CITATIONS
+Medline UID:	94004965
+Title:          Rapid cDNA sequencing (expressed sequence tags) from a
+                directionally cloned human infant brain cDNA library
+Authors:        Adams,M.D., Soares,M.B., Kerlavage,A.R., Fields,C.,
+                Venter,J.C.
+Citation:	Nature Genet. 4: 373-380 1993
+
+MAP DATA
+
+NEIGHBORS
+
+Top 15 protein matches
+
+Neighbor:       gi|897693 (Z50026) phosphatidylcholine transfer protein [Bos
+                taurus]
+Pvalue:		6.566e-06
+
+Neighbor:       gi|710419 (U21660) phosphatidylcholine transfer protein [Bos
+                taurus] gi|130768|sp|P02720|PPCT_BOVIN PHOSPHATIDYLCHOLINE
+                TRANSFER PROTEIN (PC-TP) gi|72017|pir||EPBO phosphatidylcholine
+                transfer protein - bovine
+Pvalue:		6.566e-06
+
+Neighbor:       gi|467366|gnl|PID|d1005754 (D26185) unknown [Bacillus
+                subtilis] gi|2636629|gnl|PID|e1184808 (Z99124) similar to
+                hypothetical proteins [Bacillus subtilis]
+                gi|586842|sp|P37512|YYAL_BACSU HYPOTHETICAL 78.8 KD PROTEIN IN
+                TETB-EXOA INTERGENIC REGION gi|2127012|pir||S66006 hypothetical
+                protein - Bacillus subtilis
+Pvalue:		7.609e-05
+
+||
+IDENTIFIERS
+dbEST Id:	1000002
+EST name:       EST67600
+GenBank Acc:    AA358623
+GenBank gi:	2011013
+
+CLONE INFO
+Clone Id:	 (3' end)
+Source:         ATCC
+Id in host:	162814
+Other ESTs on clone: EST113558
+DNA type:	cDNA
+
+PRIMERS
+Sequencing:     M13-21
+
+SEQUENCE
+		GAGACAGAGTCTCACCCTGTGGCCCAGGNTAGAGTGCAATGGCACGNTCTCGGCTCACTG
+		CAATCTCTGCCTGCTGGGTTCAAACAATTCTCCTGCCTCAGCCTCCCGAGTAACTGGGAT
+		TACAGGTGCCCGCCACCTCGCCCAGCTAATTTTTGTATTTTTAGTAGATACGGGGTTTCA
+		CCATGTTGGCCAGGCTGGTCTCAAACTCCTGACCTCATGATCCACCCGCCTCAGNTTCCC
+		AGAGTGCTGGGATTACAGGCATGAGCCACCACGGCTGGNCTGGATTCCCAGTCTACTCTT
+		TAATACCTTCCTTACTGTATCACTGCCGTCCCTGGNTTTGGATTACCGTCACAGTTCAAT
+		CTTGTCTCTCTCTT
+
+Entry Created:	Apr 21 1997 
+Last Updated:	Apr 21 1997 
+
+COMMENTS
+                For clone availability, additional sequence and expression
+                information related to this EST, please check the TIGR Human
+                Gene Index (http://www.tigr.org/tdb/hgi/hgi.html)
+
+PUTATIVE ID	Assigned by submitter
+                EST containing Alu repeat
+
+LIBRARY
+dbEST lib id:	748
+Lib Name:       Fetal lung II
+Organism:       Homo sapiens
+Sex:            male
+Organ:          lung
+Develop. stage: fetus, 19 wks
+Vector:         pBluescript SK-
+R. Site 1:      EcoRI
+R. Site 2:      XhoI
+
+SUBMITTER
+Name:           Kerlavage, AR
+Lab:            Bioinformatics
+Institution:    The Institute for Genomic Research
+Address:        9712 Medical Center Drive, Rockville, MD 20850 USA
+Tel:		3018699056
+Fax:		3018699423
+E-mail:		arkerlav@tigr.org
+
+CITATIONS
+Medline UID:	94004965
+Title:          Rapid cDNA sequencing (expressed sequence tags) from a
+                directionally cloned human infant brain cDNA library
+Authors:        Adams,M.D., Soares,M.B., Kerlavage,A.R., Fields,C.,
+                Venter,J.C.
+Citation:	Nature Genet. 4: 373-380 1993
+
+MAP DATA
+
+NEIGHBORS
+
+Top 15 protein matches
+
+Neighbor:       gi|728837|sp|P39194|ALU7_HUMAN !!!! ALU SUBFAMILY SQ WARNING
+                ENTRY !!!!
+Pvalue:		4.405e-45
+
+Neighbor:       gi|728832|sp|P39189|ALU2_HUMAN !!!! ALU SUBFAMILY SB WARNING
+                ENTRY !!!!
+Pvalue:		2.411e-44
+
+Neighbor:       gi|728833|sp|P39190|ALU3_HUMAN !!!! ALU SUBFAMILY SB1 WARNING
+                ENTRY !!!!
+Pvalue:		2.059e-41
+
+Neighbor:       gi|728835|sp|P39192|ALU5_HUMAN !!!! ALU SUBFAMILY SC WARNING
+                ENTRY !!!!
+Pvalue:		3.230e-41
+
+Neighbor:       gi|728836|sp|P39193|ALU6_HUMAN !!!! ALU SUBFAMILY SP WARNING
+                ENTRY !!!!
+Pvalue:		3.395e-41
+
+Neighbor:       gi|728838|sp|P39195|ALU8_HUMAN !!!! ALU SUBFAMILY SX WARNING
+                ENTRY !!!!
+Pvalue:		4.126e-39
+
+Neighbor:       gi|728834|sp|P39191|ALU4_HUMAN !!!! ALU SUBFAMILY SB2 WARNING
+                ENTRY !!!!
+Pvalue:		2.148e-38
+
+Neighbor:       gi|113668|sp|P23961|ALUC_HUMAN !!!! ALU CLASS C WARNING ENTRY
+                !!!!
+Pvalue:		1.754e-37
+
+Neighbor:       gi|728831|sp|P39188|ALU1_HUMAN !!!! ALU SUBFAMILY J WARNING
+                ENTRY !!!!
+Pvalue:		2.617e-37
+
+Neighbor:       gi|1872200 (U22376) alternatively spliced product using exon
+                13A [Homo sapiens]
+Pvalue:		1.425e-34
+
+Neighbor:       gi|1710216 (U79260) unknown [Homo sapiens]
+Pvalue:		1.924e-34
+
+Neighbor:       gi|113666|sp|P23959|ALUA_HUMAN !!!! ALU CLASS A WARNING ENTRY
+                !!!!
+Pvalue:		1.002e-33
+
+Neighbor:       gi|113670|sp|P23963|ALUE_HUMAN !!!! ALU CLASS E WARNING ENTRY
+                !!!!
+Pvalue:		3.666e-32
+
+Neighbor:       gi|403460 (L24521) transformation-related protein [Homo
+                sapiens]
+Pvalue:		9.966e-32
+
+Neighbor:       gi|113671|sp|P23964|ALUF_HUMAN !!!! ALU CLASS F WARNING ENTRY
+                !!!!
+Pvalue:		8.075e-28
+
+
+Top 15 nucleotide matches
+
+Neighbor:       gi|551537|gb|U14568|HSU14568 ***ALU WARNING: Human Alu-Sb
+                subfamily consensus sequence
+Pvalue:		2.319e-87
+
+Neighbor:       gi|551538|gb|U14569|HSU14569 ***ALU WARNING: Human Alu-Sb1
+                subfamily consensus sequence
+Pvalue:		2.797e-82
+
+Neighbor:       gi|174891|gb|M87914|HUMALNE461 Human carcinoma cell-derived
+                Alu RNA transcript, clone NE461.
+Pvalue:		1.250e-80
+
+Neighbor:       gi|174869|gb|M87923|HUMALCE12 Human carcinoma cell-derived Alu
+                RNA transcript, clone CE12.
+Pvalue:		1.831e-73
+
+Neighbor:       gi|174893|gb|M87919|HUMALNE53 Human carcinoma cell-derived Alu
+                RNA transcript, clone NE53.
+Pvalue:		1.000e-71
+
+Neighbor:       gi|551543|gb|U14574|HSU14574 ***ALU WARNING: Human Alu-Sx
+                subfamily consensus sequence
+Pvalue:		1.817e-70
+
+Neighbor:       gi|174879|gb|M87916|HUMALND167 Human carcinoma cell-derived
+                Alu RNA transcript, clone ND167.
+Pvalue:		3.481e-70
+
+Neighbor:       gi|1825085|gb|I34294|I34294 Sequence 8 from patent US 5597694
+Pvalue:		3.294e-68
+
+Neighbor:       gi|174866|gb|M87891|HUMALCD143 Human carcinoma cell-derived
+                Alu RNA transcript, clone CD143.
+Pvalue:		6.003e-68
+
+Neighbor:       gi|174890|gb|M87917|HUMALNE441 Human carcinoma cell-derived
+                Alu RNA transcript, clone NE441.
+Pvalue:		9.414e-68
+
+Neighbor:       gi|174892|gb|M87918|HUMALNE51 Human carcinoma cell-derived Alu
+                RNA transcript, clone NE51.
+Pvalue:		1.040e-67
+
+Neighbor:       gi|174864|gb|M87922|HUMALCD139 Human carcinoma cell-derived
+                Alu RNA transcript, clone CD139.
+Pvalue:		2.095e-67
+
+Neighbor:       gi|551536|gb|U14567|HSU14567 ***ALU WARNING: Human Alu-J
+                subfamily consensus sequence
+Pvalue:		5.087e-62
+
+Neighbor:       gi|174865|gb|M87889|HUMALCD140 Human carcinoma cell-derived
+                Alu RNA transcript, clone CD140.
+Pvalue:		3.077e-61
+
+Neighbor:       gi|174862|gb|M87898|HUMALCD133 Human carcinoma cell-derived
+                Alu RNA transcript, clone CD133.
+Pvalue:		6.118e-56
+
+||
+IDENTIFIERS
+dbEST Id:	1000003
+EST name:       EST67603
+GenBank Acc:    AA358675
+GenBank gi:	2011014
+
+CLONE INFO
+Clone Id:	 (5' end)
+Source:         ATCC
+Id in host:	105216
+Other ESTs on clone: EST67602 THC182232
+DNA type:	cDNA
+
+PRIMERS
+Sequencing:     M13 Reverse
+
+SEQUENCE
+		CTGCTCTCCCTAGACAGCTACCGCACCACCCACCTGCACAACGACCTCTGGGAGGTGTTC
+		AGCAACCCCGAGGACTGGAAGGAGAAGTACATCCACCAGAACTACACCAAAGCCCTGGCA
+		GGGAAGCTGGTGGAGACGCCCTGCCCGGATGTCTATTGGTTCCCCATCTTCACGGAGGTG
+		GCCTGTGATGAGCTGGTGGAGGAGATGGAGCACTTTGGCCAGTGGTCTCTGGGCAACAAC
+		AAGGACAACCGCATCCAGGGTGGCTACGAGAACGTGCCGACTATTGACATCCACATGAAC
+		CAGATCGGCTTTNAGCGGGAGTGGCACAATTNCTGCTTGGGTACATTNCGCCATGACGGA
+		GAAGTNTACCCCGGTACTANACAGGGGCCATTTNACTGGCTTTNTCGTCNTTAAAAGCTG
+		NTTGCAGCCTAAT
+
+Entry Created:	Apr 21 1997 
+Last Updated:	Apr 21 1997 
+
+COMMENTS
+                For clone availability, additional sequence and expression
+                information related to this EST, please check the TIGR Human
+                Gene Index (http://www.tigr.org/tdb/hgi/hgi.html)
+
+PUTATIVE ID	Assigned by submitter
+                lysyl hydroxylase
+
+LIBRARY
+dbEST lib id:	748
+Lib Name:       Fetal lung II
+Organism:       Homo sapiens
+Sex:            male
+Organ:          lung
+Develop. stage: fetus, 19 wks
+Vector:         pBluescript SK-
+R. Site 1:      EcoRI
+R. Site 2:      XhoI
+
+SUBMITTER
+Name:           Kerlavage, AR
+Lab:            Bioinformatics
+Institution:    The Institute for Genomic Research
+Address:        9712 Medical Center Drive, Rockville, MD 20850 USA
+Tel:		3018699056
+Fax:		3018699423
+E-mail:		arkerlav@tigr.org
+
+CITATIONS
+Medline UID:	96026280
+Title:          Initial assessment of human gene diversity and expression
+                patterns based upon 83 million nucleotides of cDNA sequence
+Authors:        Adams,M.D., Kerlavage,A.R., Fleischmann,R.D., Fuldner,R.A.,
+                Bult,C.J., Lee,N.H., Kirkness,E.F., Weinstock,K.G.,
+                Gocayne,J.D., White,O., Sutton,G., Blake,J.A., Brandon,R.C.,
+                Man-Wai,C., Clayton,R.A., Cline,T.R., Cotton,M.D.,
+                Earle-Hughes,J., Fine,L.D., Fitzgerald,L.M., Fitzhugh,W.M.,
+                Fritchman,J.L., Geoghagen,N.S., Glodek,A., Gnehm,C.L.,
+                Hanna,M.C., Hedblom,E., Hinkle,P.S.Jr., Kelley,J.M.,
+                Kelley,J.C., Liu,L.-I., Marmaros,S.M., Merrick,J.M.,
+                Moreno-Palanques,R.F., McDonald,L.A., Nguyen,D.T.,
+                Pelligrino,S.M., Phillips,C.A., Ryder,S.E., Scott,J.L.,
+                Saudek,D.M., Shirley,R., Small,K.V., Spriggs,T.A.,
+                Utterback,T.R., Weidman,J.F., Li,Y., Bednarik,D.P., Cao,L.,
+                Cepeda,M.A., Coleman,T.A., Collins,E.J., Dimke,D., Feng,D.-F.,
+                Ferrie,A., Fischer,C., Hastings,G.A., He,W.W., Hu,J.S.,
+                Greene,J.M., Gruber,J., Hudson,P., Kim,A.K., Kozak,D.L.,
+                Kunsch,C., Hungjun,J., Li,H., Meissner,P.S., Olsen,H.,
+                Raymond,L., Wei,Y.F., Wing,J., Xu,C., Yu,G.L., Ruben,S.M.,
+                Dillion,P.J., Fannon,M.R., Rosen,C.A., Haseltine,W.A.,
+                Fields,C., Fraser,C.M., Venter,J.C.
+Citation:	Nature 377 (6547 Suppl): 3-174 1995
+
+MAP DATA
+
+NEIGHBORS
+
+Top 15 protein matches
+
+Neighbor:       gi|190074 (L06419) lysyl hydroxylase [Homo sapiens]
+                gi|400205|sp|Q02809|LYSH_HUMAN
+                PROCOLLAGEN-LYSINE,2-OXOGLUTARATE 5-DIOXYGENASE PRECURSOR
+                (LYSYL HYDROXYLASE) gi|420086|pir||A38206 procollagen-lysine
+                5-dioxygenase (EC 1.14.11.4) precursor - human
+Pvalue:		7.175e-79
+
+Neighbor:       gi|409059 (L25331) lysyl hydroxylase [Rattus norvegicus]
+                gi|2143937|pir||S59964 procollagen-lysine 5-dioxygenase (EC
+                1.14.11.4) precursor - rat gi|1584463|prf||2123247A Lys
+                hydroxylase [Rattus norvegicus]
+Pvalue:		1.580e-74
+
+Neighbor:       gi|212282 (M59183) lysyl hydroxylase [Gallus gallus]
+                gi|126651|sp|P24802|LYSH_CHICK
+                PROCOLLAGEN-LYSINE,2-OXOGLUTARATE 5-DIOXYGENASE PRECURSOR
+                (LYSYL HYDROXYLASE) gi|86406|pir||A23742 procollagen-lysine
+                5-dioxygenase (EC 1.14.11.4) precursor - chicken
+Pvalue:		1.476e-67
+
+Neighbor:       gi|2138314 (U84573) lysyl hydroxylase isoform 2 [Homo sapiens]
+Pvalue:		2.102e-49
+
+Neighbor:       gi|1041320 (Z66512) F52H3.1 [Caenorhabditis elegans]
+Pvalue:		1.359e-35
+
+||
+IDENTIFIERS
+dbEST Id:	1000004
+EST name:       EST67604
+GenBank Acc:    AA358676
+GenBank gi:	2011015
+
+CLONE INFO
+Clone Id:	 (3' end)
+Source:         ATCC
+Id in host:	162815
+Other ESTs on clone: EST67605 THC119838
+DNA type:	cDNA
+
+PRIMERS
+Sequencing:     M13-21
+
+SEQUENCE
+		GATGATAAACGACTTTACTCTAAAAGCGGCTGGAACTCAGTGACATGAGCGTGCGCTGNC
+		CCCACATGGGGCCCCCTGTGCAAGCAGAGCTGGCCGGCCCCTCCTNNCTGGCAGAGGCAC
+		GGGAGGCCTGCTGGGGATGNGGCCACT
+
+Entry Created:	Apr 21 1997 
+Last Updated:	Apr 21 1997 
+
+COMMENTS
+                For clone availability, additional sequence and expression
+                information related to this EST, please check the TIGR Human
+                Gene Index (http://www.tigr.org/tdb/hgi/hgi.html)
+
+PUTATIVE ID	Assigned by submitter
+                similar to epoxide hydroxylase, microsomal
+
+LIBRARY
+dbEST lib id:	748
+Lib Name:       Fetal lung II
+Organism:       Homo sapiens
+Sex:            male
+Organ:          lung
+Develop. stage: fetus, 19 wks
+Vector:         pBluescript SK-
+R. Site 1:      EcoRI
+R. Site 2:      XhoI
+
+SUBMITTER
+Name:           Kerlavage, AR
+Lab:            Bioinformatics
+Institution:    The Institute for Genomic Research
+Address:        9712 Medical Center Drive, Rockville, MD 20850 USA
+Tel:		3018699056
+Fax:		3018699423
+E-mail:		arkerlav@tigr.org
+
+CITATIONS
+Medline UID:	94004965
+Title:          Rapid cDNA sequencing (expressed sequence tags) from a
+                directionally cloned human infant brain cDNA library
+Authors:        Adams,M.D., Soares,M.B., Kerlavage,A.R., Fields,C.,
+                Venter,J.C.
+Citation:	Nature Genet. 4: 373-380 1993
+
+MAP DATA
+
+NEIGHBORS
+
+Top 15 protein matches
+
+Neighbor:       gi|1749368|gnl|PID|d1010354 (D63395) NOTCH4 [Homo sapiens]
+Pvalue:		3.410e-04
+
+Neighbor:       gi|1841543 (U89335) notch4 [Homo sapiens]
+Pvalue:		3.585e-04
+
+
+Top 15 nucleotide matches
+
+Neighbor:       gi|537525|gb|L29766|HUMEPOHYDD Homo sapiens epoxide hydrolase
+                (EPHX) gene, complete cds.
+Pvalue:		6.470e-39
+
+||
+IDENTIFIERS
+dbEST Id:	1000005
+EST name:       EST67605
+GenBank Acc:    AA358677
+GenBank gi:	2011016
+
+CLONE INFO
+Clone Id:	 (5' end)
+Source:         ATCC
+Id in host:	162815
+Other ESTs on clone: EST67604 THC167845
+DNA type:	cDNA
+
+PRIMERS
+Sequencing:     M13 Reverse
+
+SEQUENCE
+		ACAGTGCTTGGCGCAGAGCCACAGGTGCAGTGTGGCTGCTGCCCCCCAGGAGGCCTGAGG
+		CTGGGTCTCACTGCTCTGAAAAGACACAACCAGAATGGCCTGGGGCTCAGGCCCTTGGCT
+		GAGTGGGAATGCGTTNGGACTNCCCAGCTGAGCTATCAGGTGCCCATCTTTTCTGGTACC
+		ANCAGTGGTGAGGNGAGCACAGGCAGGCCTNGNCCCTCCCTT
+
+Entry Created:	Apr 21 1997 
+Last Updated:	Apr 21 1997 
+
+COMMENTS
+                For clone availability, additional sequence and expression
+                information related to this EST, please check the TIGR Human
+                Gene Index (http://www.tigr.org/tdb/hgi/hgi.html)
+
+LIBRARY
+dbEST lib id:	748
+Lib Name:       Fetal lung II
+Organism:       Homo sapiens
+Sex:            male
+Organ:          lung
+Develop. stage: fetus, 19 wks
+Vector:         pBluescript SK-
+R. Site 1:      EcoRI
+R. Site 2:      XhoI
+
+SUBMITTER
+Name:           Kerlavage, AR
+Lab:            Bioinformatics
+Institution:    The Institute for Genomic Research
+Address:        9712 Medical Center Drive, Rockville, MD 20850 USA
+Tel:		3018699056
+Fax:		3018699423
+E-mail:		arkerlav@tigr.org
+
+CITATIONS
+Medline UID:	94004965
+Title:          Rapid cDNA sequencing (expressed sequence tags) from a
+                directionally cloned human infant brain cDNA library
+Authors:        Adams,M.D., Soares,M.B., Kerlavage,A.R., Fields,C.,
+                Venter,J.C.
+Citation:	Nature Genet. 4: 373-380 1993
+
+MAP DATA
+
+NEIGHBORS
+
+Top 15 protein matches
+
+Neighbor:       gi|940895 (U30623) peptide synthetase [Acremonium
+                coenophialum]
+Pvalue:		4.390e-05
+
+Neighbor:       gi|1714084 (M80456) [Mus musculus activated Int-3 mammary gene
+                mRNA, complete cds.], gene product [Mus musculus]
+                gi|2506381|sp|P31695|NTC4_MOUSE NEUROGENIC LOCUS NOTCH HOMOLOG
+                PROTEIN 4 PRECURSOR (TRANSFORMING PROTEIN INT-3)
+Pvalue:		5.087e-04
+
+Neighbor:       gi|1401160 (U43691) Notch4 [Mus musculus]
+Pvalue:		5.087e-04
+
+Neighbor:       gi|1831961|gnl|PID|e259433 (A29421) GGF-II [Bos sp.]
+Pvalue:		6.867e-04
+
+Neighbor:       gi|899254 (Z50038) predicted trithorax protein [Drosophila
+                virilis]
+Pvalue:		7.219e-04
+
+Neighbor:       gi|1842165|gnl|PID|d1013517 (D85612) NFATx [Mus musculus]
+Pvalue:		1.251e-03
+
+Neighbor:       gi|464178|gnl|PID|d1004092 (D14853) polyprotein [Hepatitis C
+                virus]
+Pvalue:		1.454e-03
+
+Neighbor:       gi|340361 (M10321) von Willebrand factor prepropeptide [Homo
+                sapiens]
+Pvalue:		1.776e-03
+
+Neighbor:       gi|1780780|gnl|PID|e290796 (Z83861) COS46.3 [Ciona
+                intestinalis]
+Pvalue:		2.169e-03
+
+Neighbor:       gi|903661 (U29445) reverse transcriptase coding region; start
+                site of translation has not been determined [Ascaris
+                lumbricoides] gi|2146863|pir||S60004 hypothetical protein -
+                common roundworm retrotransposon R4 (fragment)
+Pvalue:		2.649e-03
+
+Neighbor:       gi|202800 (M64780) agrin [Rattus norvegicus]
+Pvalue:		2.785e-03
+
+Neighbor:       gi|202799 (M64780) agrin [Rattus norvegicus]
+Pvalue:		2.785e-03
+
+Neighbor:       gi|399021|sp|P25304|AGRI_RAT AGRIN PRECURSOR
+                gi|279665|pir||AGRT agrin - rat
+Pvalue:		2.928e-03
+
+Neighbor:       gi|37947 (X04385) VWF pre-pro-polypeptide (-22 to 2791) [Homo
+                sapiens]
+Pvalue:		5.608e-03
+
+Neighbor:       gi|340356 (M25865) von Willebrand factor [Homo sapiens]
+                gi|401413|sp|P04275|VWF_HUMAN VON WILLEBRAND FACTOR PRECURSOR
+                gi|319923|pir||VWHU von Willebrand factor precursor - human
+Pvalue:		5.608e-03
+
+||
+IDENTIFIERS
+dbEST Id:	1000006
+EST name:       EST67606
+GenBank Acc:    AA358678
+GenBank gi:	2011017
+
+CLONE INFO
+Clone Id:	 (3' end)
+Source:         ATCC
+Id in host:	162816
+Other ESTs on clone: EST67607 THC167524
+DNA type:	cDNA
+
+PRIMERS
+Sequencing:     M13-21
+
+SEQUENCE
+		GGTAAGGTTGAATGCACTTTTGGTTTTTGGTCATGTTCGGTTGGTCAAAGATAAAAACTA
+		AGTTTGAGAGATGAATGCAAAGGAAAAAAATATTTNCCAAAGTCCATGTGAAATTGTCTC
+		CCATTTTTTGGCTTTTGAGGGGGTTCAGTTTGGGTTGCTTGTCTGTTTCCGGGTTGGGGG
+		GAAAGTTGGTTGGGTGGGAGGGAGCCAGGTTGGGATGGAGGGAGTTTACAGGAAGCAGAC
+		AGGGCCAACGTCGAAGCCGAATTCCTGGTCTNGGGCACCAACGTCCAAGGGGGCCACATC
+		GATGATNGGCAGGCGGGAGGTCTTGGTGGGTTTTGTATTCAATCACTGTCTT
+
+Entry Created:	Apr 21 1997 
+Last Updated:	Apr 21 1997 
+
+COMMENTS
+                For clone availability, additional sequence and expression
+                information related to this EST, please check the TIGR Human
+                Gene Index (http://www.tigr.org/tdb/hgi/hgi.html)
+
+PUTATIVE ID	Assigned by submitter
+                collagen, type I, alpha 1
+
+LIBRARY
+dbEST lib id:	748
+Lib Name:       Fetal lung II
+Organism:       Homo sapiens
+Sex:            male
+Organ:          lung
+Develop. stage: fetus, 19 wks
+Vector:         pBluescript SK-
+R. Site 1:      EcoRI
+R. Site 2:      XhoI
+
+SUBMITTER
+Name:           Kerlavage, AR
+Lab:            Bioinformatics
+Institution:    The Institute for Genomic Research
+Address:        9712 Medical Center Drive, Rockville, MD 20850 USA
+Tel:		3018699056
+Fax:		3018699423
+E-mail:		arkerlav@tigr.org
+
+CITATIONS
+Medline UID:	96026280
+Title:          Initial assessment of human gene diversity and expression
+                patterns based upon 83 million nucleotides of cDNA sequence
+Authors:        Adams,M.D., Kerlavage,A.R., Fleischmann,R.D., Fuldner,R.A.,
+                Bult,C.J., Lee,N.H., Kirkness,E.F., Weinstock,K.G.,
+                Gocayne,J.D., White,O., Sutton,G., Blake,J.A., Brandon,R.C.,
+                Man-Wai,C., Clayton,R.A., Cline,T.R., Cotton,M.D.,
+                Earle-Hughes,J., Fine,L.D., Fitzgerald,L.M., Fitzhugh,W.M.,
+                Fritchman,J.L., Geoghagen,N.S., Glodek,A., Gnehm,C.L.,
+                Hanna,M.C., Hedblom,E., Hinkle,P.S.Jr., Kelley,J.M.,
+                Kelley,J.C., Liu,L.-I., Marmaros,S.M., Merrick,J.M.,
+                Moreno-Palanques,R.F., McDonald,L.A., Nguyen,D.T.,
+                Pelligrino,S.M., Phillips,C.A., Ryder,S.E., Scott,J.L.,
+                Saudek,D.M., Shirley,R., Small,K.V., Spriggs,T.A.,
+                Utterback,T.R., Weidman,J.F., Li,Y., Bednarik,D.P., Cao,L.,
+                Cepeda,M.A., Coleman,T.A., Collins,E.J., Dimke,D., Feng,D.-F.,
+                Ferrie,A., Fischer,C., Hastings,G.A., He,W.W., Hu,J.S.,
+                Greene,J.M., Gruber,J., Hudson,P., Kim,A.K., Kozak,D.L.,
+                Kunsch,C., Hungjun,J., Li,H., Meissner,P.S., Olsen,H.,
+                Raymond,L., Wei,Y.F., Wing,J., Xu,C., Yu,G.L., Ruben,S.M.,
+                Dillion,P.J., Fannon,M.R., Rosen,C.A., Haseltine,W.A.,
+                Fields,C., Fraser,C.M., Venter,J.C.
+Citation:	Nature 377 (6547 Suppl): 3-174 1995
+
+MAP DATA
+
+NEIGHBORS
+
+Top 15 protein matches
+
+Neighbor:       gi|180805 (M32790) mutant alpha-1 collagen type 1 [Homo
+                sapiens]
+Pvalue:		5.972e-66
+
+Neighbor:       gi|755062 (M27208) alpha-1 type I collagen [Rattus norvegicus]
+                gi|2143577|pir||I57652 alpha-1 type I collagen - rat (fragment)
+Pvalue:		2.212e-30
+
+Neighbor:       gi|555432 (M10571) alpha-1 collagen (I) [Gallus gallus]
+Pvalue:		3.216e-20
+
+Neighbor:       gi|104585|pir||S07234 collagen alpha 1(I) chain precursor -
+                chicken
+Pvalue:		3.216e-20
+
+Neighbor:       gi|407590|bbs|136445 (S64596) type I collagen pro alpha 1(I)
+                chain propeptide {C-terminal} [human, fetal cells 86-237,
+                86146, 88-251, Peptide Partial Mutant, 284 aa] [Homo sapiens]
+Pvalue:		1.304e-19
+
+Neighbor:       gi|2736081 (AF017178) pro alpha 1(I) collagen [Homo sapiens]
+Pvalue:		1.946e-19
+
+Neighbor:       gi|115269|sp|P02452|CA11_HUMAN PROCOLLAGEN ALPHA 1(I) CHAIN
+                PRECURSOR
+Pvalue:		6.144e-19
+
+Neighbor:       gi|2144803|pir||CGHU1S collagen alpha 1(I) chain precursor -
+                human
+Pvalue:		6.791e-19
+
+Neighbor:       gi|180392 (K01228) alpha 1 (I) chain propeptide [Homo sapiens]
+Pvalue:		1.438e-18
+
+Neighbor:       gi|192665 (M63708) alpha-1 type I collagen [Mus musculus]
+Pvalue:		1.670e-18
+
+Neighbor:       gi|1418928|gnl|PID|e250726 (Z74615) prepro-alpha1(I) collagen
+                [Homo sapiens]
+Pvalue:		2.145e-18
+
+Neighbor:       gi|63308 (V00401) collagen [Gallus gallus]
+                gi|2119160|pir||I50629 collagen - chicken (fragment)
+Pvalue:		5.545e-18
+
+Neighbor:       gi|385471|bbs|133177 (S61950) alpha 2(I) procollagen, alpha
+                2(I) {C-terminal} [rabbits, glomeruli, Peptide Partial, 91 aa]
+                [Oryctolagus cuniculus]
+Pvalue:		7.120e-18
+
+Neighbor:       gi|424104 (U03419) alpha-1 type I procollagen [Mus musculus]
+Pvalue:		9.143e-18
+
+Neighbor:       gi|543201|pir||S39789 collagen alpha 1(I) chain precursor -
+                mouse (fragments)
+Pvalue:		1.666e-17
+
+
+Top 15 nucleotide matches
+
+Neighbor:       gi|180391|gb|K01228|HUMCG1PA1 Human proalpha 1 (I) chain of
+                type I procollagen mRNA (partial).
+Pvalue:		1.813e-127
+
+Neighbor:       gi|424103|gb|U03419|MMC1AI Mus musculus alpha-1 type I
+                procollagen mRNA, partial cds.
+Pvalue:		5.320e-60
+
+Neighbor:       gi|755061|gb|M27208|RATCOL1A1A Rattus norvegicus (clone
+                pmt-14) alpha-1 type I collagen mRNA, partial cds.
+Pvalue:		3.921e-58
+
+Neighbor:       gi|1675355|gb|U75405|RNU75405 Rattus norvegicus alpha 1 type I
+                collagen mRNA, 3' untranslated region, partial sequence
+Pvalue:		8.194e-53
+
+Neighbor:       gi|755060|gb|M27207|RATCOL1A1 Rattus norvegicus (clone
+                pL6-3-1) alpha-1 type I collagen mRNA, 3' UTR.
+Pvalue:		3.431e-45
+
+Neighbor:       gi|407589|gb|S64596|S64596 COL1A1=type I collagen pro alpha
+                1(I) chain propeptide {3' region} [human, fetal cells 86-237,
+                86-146, 88-251, mRNA Partial Mutant, 855 nt]
+Pvalue:		7.459e-36
+
+Neighbor:       gi|565266|gb||SEG_HUMC1PA1S Human pro-alpha-1 collagen type 1
+                mRNA, partial cds.
+Pvalue:		4.501e-34
+
+Neighbor:       gi|30092|emb|X06269|HSCOLA1P Human mRNA for pro-1(I)collagen
+                chain (Col1A1)
+Pvalue:		1.605e-22
+
+Neighbor:       gi|203186|gb||SEG_RATC1A1A Rat alpha-1 type I collagen mRNA,
+                segment 1.
+Pvalue:		5.545e-18
+
+Neighbor:       gi|30121|emb|X02374|HSCOLIIC Human gene fragment for pro-alpha
+                1(II) collagen (aa 1240-1287) C-prepropeptide exon
+Pvalue:		6.113e-17
+
+Neighbor:       gi|29588|emb|X04758|HSCA2VR Human mRNA for pro-alpha 2 (V)
+                collagen chain
+Pvalue:		1.162e-13
+
+Neighbor:       gi|309180|gb|L02918|MUSCOL5A2X Mouse procollagen type V alpha
+                2 (Col5a-2) mRNA, complete cds.
+Pvalue:		3.848e-12
+
+||
+IDENTIFIERS
+dbEST Id:	1000007
+EST name:       EST67607
+GenBank Acc:    AA358679
+GenBank gi:	2011018
+
+CLONE INFO
+Clone Id:	 (5' end)
+Source:         ATCC
+Id in host:	162816
+Other ESTs on clone: EST67606 THC169438
+DNA type:	cDNA
+
+PRIMERS
+Sequencing:     M13 Reverse
+
+SEQUENCE
+		TGAACGTGGACCTCCTGGATTGGCAGGGGCCCCAGGACTTAGAGGTGGAGCTGGTCCCCC
+		TGGTCCCGAAGGAGGAAAGGGTGCTGCTGGTCCTCCTGGGCCACCTGGTGCTGCTGGTAC
+		TCCTGGTCTNCAAGGAATGCCTGGAGAAAGAGGAGGTCTTGGAAGCCCTGGTCCTCCCAG
+		CGCTGGTTTCGACTTCAGCTTCCTGCCCCAGCCACCTCAAGAGAAGGCTCACGATGGTGG
+		CCGCTACTANCGGGCTGATGATGCCAATGTGGTTCGTGACCGTNACCTNNAGGTGGACAA
+		CAACCTTCAAGAGNCTGAGNCAGCAGATCGAGAACAT
+
+Entry Created:	Apr 21 1997 
+Last Updated:	Apr 21 1997 
+
+COMMENTS
+                For clone availability, additional sequence and expression
+                information related to this EST, please check the TIGR Human
+                Gene Index (http://www.tigr.org/tdb/hgi/hgi.html)
+
+PUTATIVE ID	Assigned by submitter
+                similar to collagen, type III, alpha 1
+
+LIBRARY
+dbEST lib id:	748
+Lib Name:       Fetal lung II
+Organism:       Homo sapiens
+Sex:            male
+Organ:          lung
+Develop. stage: fetus, 19 wks
+Vector:         pBluescript SK-
+R. Site 1:      EcoRI
+R. Site 2:      XhoI
+
+SUBMITTER
+Name:           Kerlavage, AR
+Lab:            Bioinformatics
+Institution:    The Institute for Genomic Research
+Address:        9712 Medical Center Drive, Rockville, MD 20850 USA
+Tel:		3018699056
+Fax:		3018699423
+E-mail:		arkerlav@tigr.org
+
+CITATIONS
+Medline UID:	96026280
+Title:          Initial assessment of human gene diversity and expression
+                patterns based upon 83 million nucleotides of cDNA sequence
+Authors:        Adams,M.D., Kerlavage,A.R., Fleischmann,R.D., Fuldner,R.A.,
+                Bult,C.J., Lee,N.H., Kirkness,E.F., Weinstock,K.G.,
+                Gocayne,J.D., White,O., Sutton,G., Blake,J.A., Brandon,R.C.,
+                Man-Wai,C., Clayton,R.A., Cline,T.R., Cotton,M.D.,
+                Earle-Hughes,J., Fine,L.D., Fitzgerald,L.M., Fitzhugh,W.M.,
+                Fritchman,J.L., Geoghagen,N.S., Glodek,A., Gnehm,C.L.,
+                Hanna,M.C., Hedblom,E., Hinkle,P.S.Jr., Kelley,J.M.,
+                Kelley,J.C., Liu,L.-I., Marmaros,S.M., Merrick,J.M.,
+                Moreno-Palanques,R.F., McDonald,L.A., Nguyen,D.T.,
+                Pelligrino,S.M., Phillips,C.A., Ryder,S.E., Scott,J.L.,
+                Saudek,D.M., Shirley,R., Small,K.V., Spriggs,T.A.,
+                Utterback,T.R., Weidman,J.F., Li,Y., Bednarik,D.P., Cao,L.,
+                Cepeda,M.A., Coleman,T.A., Collins,E.J., Dimke,D., Feng,D.-F.,
+                Ferrie,A., Fischer,C., Hastings,G.A., He,W.W., Hu,J.S.,
+                Greene,J.M., Gruber,J., Hudson,P., Kim,A.K., Kozak,D.L.,
+                Kunsch,C., Hungjun,J., Li,H., Meissner,P.S., Olsen,H.,
+                Raymond,L., Wei,Y.F., Wing,J., Xu,C., Yu,G.L., Ruben,S.M.,
+                Dillion,P.J., Fannon,M.R., Rosen,C.A., Haseltine,W.A.,
+                Fields,C., Fraser,C.M., Venter,J.C.
+Citation:	Nature 377 (6547 Suppl): 3-174 1995
+
+MAP DATA
+
+NEIGHBORS
+
+Top 15 protein matches
+
+Neighbor:       gi|2144803|pir||CGHU1S collagen alpha 1(I) chain precursor -
+                human
+Pvalue:		1.328e-26
+
+Neighbor:       gi|407590|bbs|136445 (S64596) type I collagen pro alpha 1(I)
+                chain propeptide {C-terminal} [human, fetal cells 86-237,
+                86146, 88-251, Peptide Partial Mutant, 284 aa] [Homo sapiens]
+Pvalue:		5.860e-20
+
+Neighbor:       gi|180392 (K01228) alpha 1 (I) chain propeptide [Homo sapiens]
+Pvalue:		9.190e-20
+
+Neighbor:       gi|2736081 (AF017178) pro alpha 1(I) collagen [Homo sapiens]
+Pvalue:		9.661e-20
+
+Neighbor:       gi|1418928|gnl|PID|e250726 (Z74615) prepro-alpha1(I) collagen
+                [Homo sapiens]
+Pvalue:		9.661e-20
+
+Neighbor:       gi|115269|sp|P02452|CA11_HUMAN PROCOLLAGEN ALPHA 1(I) CHAIN
+                PRECURSOR
+Pvalue:		9.661e-20
+
+Neighbor:       gi|63308 (V00401) collagen [Gallus gallus]
+                gi|2119160|pir||I50629 collagen - chicken (fragment)
+Pvalue:		1.367e-18
+
+Neighbor:       gi|115268|sp|P02457|CA11_CHICK PROCOLLAGEN ALPHA 1(I) CHAIN
+                PRECURSOR
+Pvalue:		1.756e-18
+
+Neighbor:       gi|499622 (M23213) collagen alpha 1 chain type I [Homo
+                sapiens]
+Pvalue:		1.846e-18
+
+Neighbor:       gi|543201|pir||S39789 collagen alpha 1(I) chain precursor -
+                mouse (fragments)
+Pvalue:		4.761e-17
+
+Neighbor:       gi|1495200|gnl|PID|e258595 (Z78279) Collagen alpha1 [Rattus
+                norvegicus]
+Pvalue:		5.005e-17
+
+Neighbor:       gi|424104 (U03419) alpha-1 type I procollagen [Mus musculus]
+Pvalue:		5.248e-16
+
+Neighbor:       gi|470674 (U08020) collagen pro-alpha-1 type I chain [Mus
+                musculus] gi|2506305|sp|P11087|CA11_MOUSE PROCOLLAGEN ALPHA
+                1(I) CHAIN PRECURSOR gi|1363108|pir||S57243 collagen alpha 1(I)
+                chain precursor - mouse
+Pvalue:		7.084e-16
+
+Neighbor:       gi|1611398|pat|US|5538853|1 Sequence 1 from patent US 5538853
+Pvalue:		1.051e-13
+
+Neighbor:       gi|212611 (M95404) prion protein [Gallus gallus]
+                gi|400846|sp|P27177|PRIO_CHICK MAJOR PRION PROTEIN HOMOLOG
+                PRECURSOR (PR-LP) (ACETYLCHOLINE RECEPTOR-INDUCING ACTIVITY)
+                (ARIA) (65-21 PROTEIN) gi|422698|pir||A46280 prion protein -
+                chicken
+Pvalue:		1.488e-12
+
+
+Top 15 nucleotide matches
+
+Neighbor:       gi|340842|gb|M23213|HUMOIM Homo sapiens (osteogenesis
+                imperfecta mutation) collagen alpha 1 chain type I gene,
+                partial cds.
+Pvalue:		3.334e-34
+
+||
+IDENTIFIERS
+dbEST Id:	1000008
+EST name:       EST67609
+GenBank Acc:    AA358680
+GenBank gi:	2011019
+
+CLONE INFO
+Clone Id:	 (5' end)
+Source:         ATCC
+Id in host:	105217
+Other ESTs on clone: EST67608
+DNA type:	cDNA
+
+PRIMERS
+Sequencing:     M13 Reverse
+
+SEQUENCE
+		CTCATCTGCACCTGGGCCCGGCCGGGCAAGGCGTTCACAGACGAGGAGACCGAGGCCCAG
+		ACAGGGGAAGGAAGTTGGCCCAGGTCACCCAGCAAGTCAGTGGTAGAGGGCATCTCCTCC
+		CAACCAGGCAACTCCCCGAGTGGCACAGTGGTGTGAAGCCATGGATATCGGGCCCCCCCA
+		ACCCCATGCCCCCAGCCTCCTAGCCATAACCCTCCCTGCTGACCTCACAGATCAACGTAT
+		TAACAAGACTAACCATGATGGATGGACTNCTCCAGTCCCCCCAACTGCACAAAATTTNGG
+		GGCCCCCAGACTNGNCCGGACACGGGGATGTAATAGCCTTGTGGNCTCAGCTTGTCCCCA
+		CCATTNCAATACAATGACTCTTCCTNTGAAAATAANGTTACCTCTCCTGTCCCAGATTGA
+		TTGTAATTCTNGGGNGAATTCCGGCCTTGCAAAGNGNCCAGGTTG
+
+Entry Created:	Apr 21 1997 
+Last Updated:	Apr 21 1997 
+
+COMMENTS
+                For clone availability, additional sequence and expression
+                information related to this EST, please check the TIGR Human
+                Gene Index (http://www.tigr.org/tdb/hgi/hgi.html)
+
+PUTATIVE ID	Assigned by submitter
+                similar to protein 59
+
+LIBRARY
+dbEST lib id:	748
+Lib Name:       Fetal lung II
+Organism:       Homo sapiens
+Sex:            male
+Organ:          lung
+Develop. stage: fetus, 19 wks
+Vector:         pBluescript SK-
+R. Site 1:      EcoRI
+R. Site 2:      XhoI
+
+SUBMITTER
+Name:           Kerlavage, AR
+Lab:            Bioinformatics
+Institution:    The Institute for Genomic Research
+Address:        9712 Medical Center Drive, Rockville, MD 20850 USA
+Tel:		3018699056
+Fax:		3018699423
+E-mail:		arkerlav@tigr.org
+
+CITATIONS
+Medline UID:	96026280
+Title:          Initial assessment of human gene diversity and expression
+                patterns based upon 83 million nucleotides of cDNA sequence
+Authors:        Adams,M.D., Kerlavage,A.R., Fleischmann,R.D., Fuldner,R.A.,
+                Bult,C.J., Lee,N.H., Kirkness,E.F., Weinstock,K.G.,
+                Gocayne,J.D., White,O., Sutton,G., Blake,J.A., Brandon,R.C.,
+                Man-Wai,C., Clayton,R.A., Cline,T.R., Cotton,M.D.,
+                Earle-Hughes,J., Fine,L.D., Fitzgerald,L.M., Fitzhugh,W.M.,
+                Fritchman,J.L., Geoghagen,N.S., Glodek,A., Gnehm,C.L.,
+                Hanna,M.C., Hedblom,E., Hinkle,P.S.Jr., Kelley,J.M.,
+                Kelley,J.C., Liu,L.-I., Marmaros,S.M., Merrick,J.M.,
+                Moreno-Palanques,R.F., McDonald,L.A., Nguyen,D.T.,
+                Pelligrino,S.M., Phillips,C.A., Ryder,S.E., Scott,J.L.,
+                Saudek,D.M., Shirley,R., Small,K.V., Spriggs,T.A.,
+                Utterback,T.R., Weidman,J.F., Li,Y., Bednarik,D.P., Cao,L.,
+                Cepeda,M.A., Coleman,T.A., Collins,E.J., Dimke,D., Feng,D.-F.,
+                Ferrie,A., Fischer,C., Hastings,G.A., He,W.W., Hu,J.S.,
+                Greene,J.M., Gruber,J., Hudson,P., Kim,A.K., Kozak,D.L.,
+                Kunsch,C., Hungjun,J., Li,H., Meissner,P.S., Olsen,H.,
+                Raymond,L., Wei,Y.F., Wing,J., Xu,C., Yu,G.L., Ruben,S.M.,
+                Dillion,P.J., Fannon,M.R., Rosen,C.A., Haseltine,W.A.,
+                Fields,C., Fraser,C.M., Venter,J.C.
+Citation:	Nature 377 (6547 Suppl): 3-174 1995
+
+MAP DATA
+
+NEIGHBORS
+
+Top 15 protein matches
+
+Neighbor:       gi|306712 (L19267) putative [Homo sapiens]
+                gi|1706453|sp|Q09019|DMR9_HUMAN DMR-N9 PROTEIN (PROTEIN 59)
+                gi|1082161|pir||A49364 59 protein, brain - human (fragment)
+Pvalue:		2.104e-30
+
+Neighbor:       gi|300249|bbs|131388 (S60312) DMR-N9 {C-terminal} [mice,
+                brain, Peptide Partial, 568 aa] [Mus sp.]
+                gi|2143455|pir||I58106 gene DMR-N9 protein - mouse (fragment)
+Pvalue:		1.894e-28
+
+Neighbor:       gi|817954|gnl|PID|e321831 (Z38011) DMR-N9 [Mus musculus]
+                gi|1706454|sp|Q08274|DMR9_MOUSE DMR-N9 PROTEIN
+Pvalue:		2.093e-28
+
+Neighbor:       gi|1083770|pir||A55148 protein-tyrosine-phosphatase (EC
+                3.1.3.48), receptor type OST precursor - rat
+Pvalue:		6.230e-05
+
+Neighbor:       gi|725329 (L36884) protein tyrosine phosphatase [Rattus
+                norvegicus] gi|2499757|sp|Q64612|PTPO_RAT OSTEOTESTICULAR
+                PROTEIN TYROSINE PHOSPHATASE PRECURSOR
+Pvalue:		6.230e-05
+
+Neighbor:       gi|181602 (L08835) putative [Homo sapiens]
+Pvalue:		5.334e-03
+
+||
+IDENTIFIERS
+dbEST Id:	1000009
+EST name:       EST67612
+GenBank Acc:    AA358681
+GenBank gi:	2011020
+
+CLONE INFO
+Clone Id:	 (3' end)
+Source:         ATCC
+Id in host:	162817
+Other ESTs on clone: EST67613
+DNA type:	cDNA
+
+PRIMERS
+Sequencing:     M13-21
+
+SEQUENCE
+		GTGTCCAGGAGAGCTTTTATTTGTACGGAACAGTTTTAAAAATACAGAATAAAATAGCTT
+		TATCTCTACTATTATTCACAACATCTGGTCCAAATATTACATATTTTTAAAATACTTAAA
+		CGTTTAATGAAGCCATGTTAGAAAAACAATATGAAAATNCTTTTTAAAAACTCCATAAAA
+		GANTTACACATCTCAAAAAACAACCCCACCCCAAATACCCTCGGTAATCAAAATAAAANT
+		AAAAAACAAACAAAACCCCAGAAAGGTATATATAGCCAAAGTCAGTCACAAAAACTCANG
+		GAAAATATAGGCATCCCCACTGTTTTAGGACCAGTCAGAAATGTATTAGGGTGTCAAATG
+		GNGGTTGTTCTACGGCAAAAAAGG
+
+Entry Created:	Apr 21 1997 
+Last Updated:	Apr 21 1997 
+
+COMMENTS
+                For clone availability, additional sequence and expression
+                information related to this EST, please check the TIGR Human
+                Gene Index (http://www.tigr.org/tdb/hgi/hgi.html)
+
+LIBRARY
+dbEST lib id:	748
+Lib Name:       Fetal lung II
+Organism:       Homo sapiens
+Sex:            male
+Organ:          lung
+Develop. stage: fetus, 19 wks
+Vector:         pBluescript SK-
+R. Site 1:      EcoRI
+R. Site 2:      XhoI
+
+SUBMITTER
+Name:           Kerlavage, AR
+Lab:            Bioinformatics
+Institution:    The Institute for Genomic Research
+Address:        9712 Medical Center Drive, Rockville, MD 20850 USA
+Tel:		3018699056
+Fax:		3018699423
+E-mail:		arkerlav@tigr.org
+
+CITATIONS
+Medline UID:	96026280
+Title:          Initial assessment of human gene diversity and expression
+                patterns based upon 83 million nucleotides of cDNA sequence
+Authors:        Adams,M.D., Kerlavage,A.R., Fleischmann,R.D., Fuldner,R.A.,
+                Bult,C.J., Lee,N.H., Kirkness,E.F., Weinstock,K.G.,
+                Gocayne,J.D., White,O., Sutton,G., Blake,J.A., Brandon,R.C.,
+                Man-Wai,C., Clayton,R.A., Cline,T.R., Cotton,M.D.,
+                Earle-Hughes,J., Fine,L.D., Fitzgerald,L.M., Fitzhugh,W.M.,
+                Fritchman,J.L., Geoghagen,N.S., Glodek,A., Gnehm,C.L.,
+                Hanna,M.C., Hedblom,E., Hinkle,P.S.Jr., Kelley,J.M.,
+                Kelley,J.C., Liu,L.-I., Marmaros,S.M., Merrick,J.M.,
+                Moreno-Palanques,R.F., McDonald,L.A., Nguyen,D.T.,
+                Pelligrino,S.M., Phillips,C.A., Ryder,S.E., Scott,J.L.,
+                Saudek,D.M., Shirley,R., Small,K.V., Spriggs,T.A.,
+                Utterback,T.R., Weidman,J.F., Li,Y., Bednarik,D.P., Cao,L.,
+                Cepeda,M.A., Coleman,T.A., Collins,E.J., Dimke,D., Feng,D.-F.,
+                Ferrie,A., Fischer,C., Hastings,G.A., He,W.W., Hu,J.S.,
+                Greene,J.M., Gruber,J., Hudson,P., Kim,A.K., Kozak,D.L.,
+                Kunsch,C., Hungjun,J., Li,H., Meissner,P.S., Olsen,H.,
+                Raymond,L., Wei,Y.F., Wing,J., Xu,C., Yu,G.L., Ruben,S.M.,
+                Dillion,P.J., Fannon,M.R., Rosen,C.A., Haseltine,W.A.,
+                Fields,C., Fraser,C.M., Venter,J.C.
+Citation:	Nature 377 (6547 Suppl): 3-174 1995
+
+MAP DATA
+
+NEIGHBORS
+
+Top 15 nucleotide matches
+
+Neighbor:       gi|1510150|dbj|D87075|D87075 Human mRNA for KIAA0238 gene,
+                partial cds
+Pvalue:		9.569e-113
+
+||
