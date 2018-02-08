@@ -199,17 +199,26 @@ if blastres_flag==True:
 ##remove sequences with min length
 if min_len_flag==True:
 	print 'Removing short sequences........'
+	print 'minlen:',min_length
 	output_handle = open(in_file+'_temp_'+str(min_length), "w")
 	ctr=0
 	short_ctr=0
+	temp_rec=[]
 	for record in SeqIO.parse(in_file, "fasta"):
-		length=len(record)
+		length=len(record.seq)
+		#print length
 		if length>=min_length:
 			ctr=ctr+1
-			SeqIO.write(record, output_handle, "fasta")
+			temp_rec.append(record)
+			#SeqIO.write(record, output_handle, "fasta")
+			#print 'writing',record.id
 		else:
 			short_ctr=short_ctr+1
-
+			#print record.id
+	
+	SeqIO.write(temp_rec, output_handle, "fasta")
+	output_handle.close()		#important else gives errors
+	
 	print 'Short Sequences <',str(min_length),str(short_ctr),' removed,',str(ctr),' retained'
 	in_file=in_file+'_temp_'+str(min_length)
 	print 'New file with filtered sequences:'	
