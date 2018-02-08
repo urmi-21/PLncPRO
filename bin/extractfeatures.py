@@ -6,6 +6,7 @@ Author : Urminder Singh
 email: urmind13_sit@jnu.ac.in
 UrMi 13/1/16
 '''
+##Note to self:This file is a mess please refractor
 from __future__ import division
 import sys
 #import math
@@ -16,7 +17,7 @@ import regex as re
 import time
 start_time = time.time()
 ########################################
-##Trimers
+##Define 64 Trimers the values are not used by PlncPRO I think these values were DNA bending propensities.
 trimervalues = {}
 trimervalues["AAT"]=-0.280
 trimervalues["ATT"]=-0.280

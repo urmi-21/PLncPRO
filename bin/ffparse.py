@@ -46,6 +46,5 @@ f = open(fname,'w')
 f.write(str('seqid')+'\t'+str('score')+'\t'+str('orf_coverage')+'\n')
 for i in range(len(qids)):
 	f.write(str(qids[i])+'\t'+str(ffscore[i])+'\t'+str(orfcoverage[i])+'\n')
-
 #print 'file: '+fname+' writen'
 

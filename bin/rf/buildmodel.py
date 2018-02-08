@@ -23,7 +23,6 @@ class bcolors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 def main():
-
 	#print os.path.dirname(sys.argv[1])
 	#iterations to build model
 	num_iterations=4
@@ -49,7 +48,7 @@ def main():
 	model_fname=os.path.dirname(sys.argv[1])+'/'+sys.argv[2]
 	with open(model_fname, 'wb') as f:
 		cPickle.dump(rf, f)
-	#build model 5 times and save with highest oob score
+	#build model num_iterations times and save with highest oob score
 	for i in range(num_iterations):
 		rf = RandomForestClassifier(n_estimators=num_trees,oob_score=True,n_jobs=num_threads)
 		rf.fit(train, target)
@@ -74,4 +73,3 @@ preds = rf.predict(new_X)
 	
 if __name__=="__main__":
 	main()
-

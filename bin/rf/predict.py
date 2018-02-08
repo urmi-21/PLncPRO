@@ -121,7 +121,6 @@ def main():
 		print '\t\tfp:',str(fp)
 		print '\t\tfn:',str(fn)
 		
-
 		try:		
 			sens=tp/p
 		except ZeroDivisionError:
@@ -159,4 +158,3 @@ def main():
 		
 if __name__=="__main__":
 	main()
-

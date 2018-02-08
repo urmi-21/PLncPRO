@@ -90,4 +90,3 @@ for x in featuredata:
 	f.write(x)
 	f.write('\n')
 #print fname+', File written'
-

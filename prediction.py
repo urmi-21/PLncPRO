@@ -305,7 +305,3 @@ os.system("mv "+out_file+" "+outdir)
 
 print 'All outputs saved to: '+ outdir
 print 'END'
-
-
-
-

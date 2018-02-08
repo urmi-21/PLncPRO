@@ -408,6 +408,3 @@ os.system("mv "+neg_files_dir+"/"+model_name+" "+outdir)
 
 print 'All outputs saved to: '+ outdir
 print 'END'
-
-
-

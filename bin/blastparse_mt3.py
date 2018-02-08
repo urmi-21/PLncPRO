@@ -234,12 +234,3 @@ for i in range(len(queryids)):
 
 #print 'File:',fname,'written'
 #print("--- %s seconds ---" % (time.time() - start_time))
-
-
-
-
-
-
-
-
-
