@@ -155,7 +155,7 @@ Examples:
    
     $ python prediction.py -i test.fa -o prediction_out -p prediction_file -m sample_out/sample_model -d path_to_blast_db -t 10
 
-2. $ python python build.py -p sample_data/train/pos.fa -n sample_data/train/neg.fa -o sample_out -m sample_model -d lib/blastdb/sprotdb/sprotdb -t 10 --min_len 300
+2. $ python build.py -p sample_data/train/pos.fa -n sample_data/train/neg.fa -o sample_out -m sample_model -d lib/blastdb/sprotdb/sprotdb -t 10 --min_len 300
 
    This command will use all sequences from neg.fa and pos.fa having
    length greater than or equal to 300 bp for constructing the model.
