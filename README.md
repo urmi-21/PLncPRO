@@ -50,9 +50,9 @@ Pre-requisite:
 Steps:
 1. Install Python and the required modules
 
-2. Download PLNCPRO.1.0.tar.gz from http://localhost/lncRNAtool/
+2. Download PLNCPRO.x.x.tar.gz from http://ccbb.jnu.ac.in/plncpro/
    and extract the files.
-   $ tar zvxf plncpro.1.0.tar.gz
+   $ tar zvxf plncpro.x.x.tar.gz
 
 3. make framefinder executable
    * Go to directory plncpro/lib/estate	    
