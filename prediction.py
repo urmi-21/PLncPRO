@@ -16,40 +16,40 @@ import os
 from Bio import SeqIO
 ######################################
 class bcolors:
-    FAIL = '\033[91m'
-    ENDC = '\033[0m'
+	FAIL = '\033[91m'
+	ENDC = '\033[0m'
     
 ######################################
 print (bcolors.FAIL)
-print '\t\t\t\t  _____  _                  _____    _____     ____  '
-print '\t\t\t\t |  __ \| |                |  __ \  |  __ \   / __ \ '
-print '\t\t\t\t | |__) | |  _ __     ___  | |__) | | |__) | | |  | |'
-print '\t\t\t\t |  ___/| | |  _ \   / __| |  ___/  |  _  /  | |  | |'
-print '\t\t\t\t | |    | | | | | | | (__  | |      | | \ \  | |__| |'
-print '\t\t\t\t |_|    |_| |_| |_|  \___| |_|      |_|  \_\  \____/ '
-print bcolors.ENDC
+print ('\t\t\t\t  _____  _                  _____    _____     ____  ')
+print ('\t\t\t\t |  __ \| |                |  __ \  |  __ \   / __ \ ')
+print ('\t\t\t\t | |__) | |  _ __     ___  | |__) | | |__) | | |  | |')
+print ('\t\t\t\t |  ___/| | |  _ \   / __| |  ___/  |  _  /  | |  | |')
+print ('\t\t\t\t | |    | | | | | | | (__  | |      | | \ \  | |__| |')
+print ('\t\t\t\t |_|    |_| |_| |_|  \___| |_|      |_|  \_\  \____/ ')
+print (bcolors.ENDC)
 ###########Define Funcs###############
 def printhelp():
-	print "*********************************************Help*********************************************"
-	print "                   DESCRIPTION"
-   	print "This script classifies transcripts as coding or non coding transcripts"
-	print "Arguments:"
-	print "-h     print this message"
-	print "-p     output file name to store prediction results"
-	print "-i     path to file containing input sequences"
-	print "-m     path to the model file"
-	print "-o     output directory name to store all results"	
-	print "-d     path to blast database"
-	print "                   OPTIONAL"
-	print "-t     number of threads[default: 4]"
-	print "-l     path to the files containg labels(this outputs performance of the classifier)"
-	print "-r     clean up intermediate files"
-	print "-v     show more messages"	
-	print "--min_len     specifiy min_length to filter input files"
-	print "--noblast     Don't use blast features"
-	print "-no_ff     Don't use framefinder features"
-	print "--qcov_hsp     specify qcov parameter for blast[default:30]"
-	print "--blastres     path to blast output for input file"
+	print ("*********************************************Help*********************************************")
+	print ("DESCRIPTION")
+	print ("This script classifies transcripts as coding or non coding transcripts")
+	print ("Arguments:")
+	print ("-h     print this message")
+	print ("-p     output file name to store prediction results")
+	print ("-i     path to file containing input sequences")
+	print ("-m     path to the model file")
+	print ("-o     output directory name to store all results")
+	print ("-d     path to blast database")
+	print ("                   OPTIONAL")
+	print ("-t     number of threads[default: 4]")
+	print ("-l     path to the files containg labels(this outputs performance of the classifier)")
+	print ("-r     clean up intermediate files")
+	print ("-v     show more messages")	
+	print ("--min_len     specifiy min_length to filter input files")
+	print ("--noblast     Don't use blast features")
+	print ("-no_ff     Don't use framefinder features")
+	print ("--qcov_hsp     specify qcov parameter for blast[default:30]")
+	print ("--blastres     path to blast output for input file")
 	
 ######################################
 ############Define variables##############
@@ -160,37 +160,37 @@ for opt, arg in opts:
 ###Check all necessary inputs
 
 if out_file_flag==False:
-	print "please give output file name for predictions -p out_file"
+	print ("please give output file name for predictions -p out_file")
 	sys.exit(0)
 if out_dir_flag==False:
-	print "please give output directory name -o out_dir"
+	print ("please give output directory name -o out_dir")
 	sys.exit(0)
 if model_file=="":
-	print "please specify model file -m model"
+	print ("please specify model file -m model")
 	sys.exit(0)
 #check if model exists
 if not (os.path.isfile(model_file) ):
-	print 'Please check model file...Error file:'+model_file+ ' doesn\'t exist'
+	print ('Please check model file...Error file:'+model_file+ ' doesn\'t exist')
 	sys.exit(0)
 #check pos,neg exists
 if not (os.path.isfile(in_file) ):
-	print 'Please check input file...Error file:'+in_file+ ' doesn\'t exist'
+	print ('Please check input file...Error file:'+in_file+ ' doesn\'t exist')
 	sys.exit(0)
 if lflag==True:
 	if not (os.path.isfile(label_file) ):
-		print 'Please check label file...Error file:'+label_file+ ' doesn\'t exist'
+		print ('Please check label file...Error file:'+label_file+ ' doesn\'t exist')
 		sys.exit(0)
 
 ##check blast database
 if noblast_flag==False:
 	if (blastres_flag==False):
 		if db_flag==False:
-			print 'Please specify blast database...Error'
+			print ('Please specify blast database...Error')
 			sys.exit(0)
 ##check for blastres files
 if blastres_flag==True:
 	if not (os.path.isfile(blastres_file) ):
-		print 'Please check blastres file...Error file: '+blastres_file+ ' doesn\'t exist'
+		print ('Please check blastres file...Error file: '+blastres_file+ ' doesn\'t exist')
 		sys.exit(0)
 
 ####################################################################################################################
@@ -198,8 +198,8 @@ if blastres_flag==True:
 
 ##remove sequences with min length
 if min_len_flag==True:
-	print 'Removing short sequences........'
-	print 'minlen:',min_length
+	print ('Removing short sequences........')
+	print ('minlen:',min_length)
 	output_handle = open(in_file+'_temp_'+str(min_length), "w")
 	ctr=0
 	short_ctr=0
@@ -219,75 +219,75 @@ if min_len_flag==True:
 	SeqIO.write(temp_rec, output_handle, "fasta")
 	output_handle.close()		#important else gives errors
 	
-	print 'Short Sequences <',str(min_length),str(short_ctr),' removed,',str(ctr),' retained'
+	print ('Short Sequences <',str(min_length),str(short_ctr),' removed,',str(ctr),' retained')
 	in_file=in_file+'_temp_'+str(min_length)
-	print 'New file with filtered sequences:'	
-	print in_file
+	print ('New file with filtered sequences:')	
+	print (in_file)
 
 
 ########################################################################################################################
 ############################################Read in file###############################################################
 if vflag:
-	print 'Reading Input File...\nExtracting Features...'
+	print ('Reading Input File...\nExtracting Features...')
 os.system("python bin/extractfeatures.py "+in_file+" 1")
 
 ########Run framefinder
 ff_featurefile_pos=in_file+"_ffout_framefinderfeatures"
 if no_ff_flag==True:
-	print 'Skipping framefinder...'
+	print ('Skipping framefinder...')
 	os.system("echo '' > "+in_file+"_ffout")
 else:
 	#print "lib/framefinder/framefinder -r False -w lib/framefinder/framefinder.model "+in_file+" > "+in_file+"_ffout"
 	os.system("lib/framefinder/framefinder -r False -w lib/framefinder/framefinder.model "+in_file+" > "+in_file+"_ffout")
 	#parse framefinder results and write framefinder feature files
 	if vflag:
-		print 'Extracting Framefinder Features...'
+		print ('Extracting Framefinder Features...')
 	os.system("python bin/ffparse.py "+in_file+"_ffout")
 
 ######Run BLASTX########
 if noblast_flag==False:
 	if blastres_flag==True:
 		if vflag:
-			print 'Parsing Blast results...\nExtracting Features...'
+			print ('Parsing Blast results...\nExtracting Features...')
 		os.system("python bin/blastparse_mt3.py "+blastres_file)
 		if vflag:
-			print 'Merging all Features...'
+			print ('Merging all Features...')
 		os.system("python bin/mergefeatures.py "+in_file+"_features "+no_ff_flagval+" "+ff_featurefile_pos+" "+noblast_flag_val+" "+blastres_file+"_blastfeatures "+" "+in_file+"_all_features")
 	else:
 		#filename for blastres
 		blastres_pos=in_file+"_blastres"
 		if vflag:
-			print 'Running BLASTX...This might take some time depending on your input.'
+			print ('Running BLASTX...This might take some time depending on your input.')
 		bcommand="lib/blast/bin/blastx -query "+in_file+" -db "+blastdb+" -outfmt '6 qseqid sseqid pident evalue qcovs qcovhsp score bitscore qframe sframe' -out "+blastres_pos+" -qcov_hsp_perc "+ str(max_qcov_hsp)+" -num_threads "+str(num_threads)
-		print str(bcommand)
+		print (str(bcommand))
 		os.system(str(bcommand))
 		if vflag:
-			print 'Parsing Blast Results...'
+			print ('Parsing Blast Results...')
 
 		os.system("python bin/blastparse_mt3.py "+blastres_pos)
-		print 'Merging all Features...'
+		print ('Merging all Features...')
 		os.system("python bin/mergefeatures.py "+in_file+"_features "+no_ff_flagval+" "+ff_featurefile_pos+" "+noblast_flag_val+" "+blastres_pos+"_blastfeatures "+" "+in_file+"_all_features")
 
 else:
 	if vflag:
-		print 'Skipping Blast...'
+		print ('Skipping Blast...')
 	blastres_pos=in_file+"_blastres"
 	os.system("echo 'X	X	0	0	0	0	0	0	0	0' > "+blastres_pos)
 	os.system("python bin/blastparse_mt3.py "+blastres_pos)
-	print 'Merging all Features...'
+	print ('Merging all Features...')
 	os.system("python bin/mergefeatures.py "+in_file+"_features "+no_ff_flagval+" "+ff_featurefile_pos+" "+noblast_flag_val+" "+blastres_pos+"_blastfeatures "+" "+in_file+"_all_features")	
 
 #########################################################################################################################
 ##############################################Start prediction###########################################################
 ##mergeboth files in one
 if vflag:
-	print 'Predicting...'
-print str("python bin/rf/predict.py "+in_file+"_all_features "+model_file+" "+out_file+" "+lflag_val+" "+label_file)
+	print ('Predicting...')
+print (str("python bin/rf/predict.py "+in_file+"_all_features "+model_file+" "+out_file+" "+lflag_val+" "+label_file))
 os.system("python bin/rf/predict.py "+in_file+"_all_features "+model_file+" "+out_file+" "+lflag_val+" "+label_file)
 
 ################Remove Temp Files##################
 if removefiles_flag==True:
-	print 'Removing temp files...'
+	print ('Removing temp files...')
 	#print "rm -f "+in_file+"_ffout_framefinderfeatures"
 	os.system("rm -f "+in_file+"_ffout_framefinderfeatures")
 	os.system("rm -f "+in_file+"_blastres_blastfeatures")
@@ -303,5 +303,5 @@ os.system("mv "+in_file+"_all_features"+" "+outdir+"/")
 os.system("mv "+in_file+"_blastres"+" "+outdir)
 os.system("mv "+out_file+" "+outdir)
 
-print 'All outputs saved to: '+ outdir
-print 'END'
+print ('All outputs saved to: '+ outdir)
+print ('END')
