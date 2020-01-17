@@ -1,6 +1,4 @@
-# PLncPRO
-|//////////////////////////////////////////////////////////////////////|
-|                                                                      |
+
 |  PLNCPRO - 	Plant Long Non-Coding rna Prediction by Random fOrests |
 |  Author: 	Urminder Singh                                         |
 |  Contact: 	urmind13_sit@jnu.ac.in                                 |
@@ -8,7 +6,7 @@
 |  Version: 	1.1                                                    |
 |  Updated on: 	July 18, 2016                                          |
 |                                                                      |
-|//////////////////////////////////////////////////////////////////////|
+
 
                           _____  _            _____  _____   ____  
                          |  __ \| |          |  __ \|  __ \ / __ \ 
@@ -16,18 +14,9 @@
                          |  ___/| | '_ \ / __|  ___/|  _  /| |  | |
                          | |    | | | | | (__| |    | | \ \| |__| |
                          |_|    |_|_| |_|\___|_|    |_|  \_\\____/ 
-			 
-
-# Publication
-
-https://academic.oup.com/nar/article/45/22/e183/4282667
-
-Please cite as:
-
-Singh, U., Khemka, N., Rajkumar, M. S., Garg, R., & Jain, M. (2017). PLncPRO for prediction of long non-coding RNAs (lncRNAs) in plants and its application for discovery of abiotic stress-responsive lncRNAs in rice and chickpea. Nucleic acids research, 45(22), e183-e183.
                                            
 
-# INTRODUCTION
+#  INTRODUCTION
 
 We have developed a program to classify coding (mRNAs) and long non-coding transcripts (lncRNAs).
 Our method is based on random forest method and uses protein homology search, sequence based and 3-mer frequency based features. 
@@ -35,9 +24,9 @@ We have developed predictive models for several plant species to predict lncRNAs
 We comprehensively tested our method on plants and vertebrates and found that our model works better as compared to the existing tools.
 
 
-# INSTALLATION
+#  INSTALLATION
 
-Pre-requisite: 
+## Pre-requisite: 
 1. OS: Linux
 2. Python 2.7.11 or later versions (http://www.python.org/)
 	a.)NumPy (http://www.numpy.org/)
@@ -47,12 +36,12 @@ Pre-requisite:
 3. NCBI BLAST (https://blast.ncbi.nlm.nih.gov/Blast.cgi)
 4. GNU C Library (glibc >= 2.14)
 
-Steps:
+## Steps:
 1. Install Python and the required modules
 
-2. Download PLNCPRO.x.x.tar.gz from http://ccbb.jnu.ac.in/plncpro/
+2. Download PLNCPRO.1.0.tar.gz from http://localhost/lncRNAtool/
    and extract the files.
-   $ tar zvxf plncpro.x.x.tar.gz
+   $ tar zvxf plncpro.1.0.tar.gz
 
 3. make framefinder executable
    * Go to directory plncpro/lib/estate	    
@@ -67,7 +56,7 @@ Steps:
 
 
 
-# USAGE AND EXAMPLES
+#  USAGE AND EXAMPLES
 
 Usage of prediction.py -- To label lncRNAs and mRNAs. This file reads an input
 file containing sequences and then classifies the sequences as coding or
@@ -148,7 +137,7 @@ python build.py -p mRNAs_fasta -n lncRNAs_fasta -m output_model_name -t number_o
   
            
 
-Examples: 
+## Examples: 
 1. $ python build.py -p sample_data/train/mrna.fa -n sample_data/train/lncrna.fa -o sample_out -m sample_model -d path_to_blast_db -t 10
 
    NOTE: This constructs a model using the mRNA sequences in the
@@ -159,13 +148,13 @@ Examples:
    
     $ python prediction.py -i test.fa -o prediction_out -p prediction_file -m sample_out/sample_model -d path_to_blast_db -t 10
 
-2. $ python build.py -p sample_data/train/pos.fa -n sample_data/train/neg.fa -o sample_out -m sample_model -d lib/blastdb/sprotdb/sprotdb -t 10 --min_len 300
+2. $ python python build.py -p sample_data/train/pos.fa -n sample_data/train/neg.fa -o sample_out -m sample_model -d lib/blastdb/sprotdb/sprotdb -t 10 --min_len 300
 
    This command will use all sequences from neg.fa and pos.fa having
    length greater than or equal to 300 bp for constructing the model.
 
 
-==========================================================================================================
+
 
 Usage of predtoseq.py -- used to extract mRNA or lncRNA sequences from
 PLNCPRO output file. This file reads a prediction output file and
@@ -192,3 +181,4 @@ python predtoseq.py -f fasta_file -o outputfile -p PLNCPRO_prediction_file -l re
 
 GNU Public License version 3 (GPLv3)
 Details on http://www.gnu.org/copyleft/gpl.html
+
