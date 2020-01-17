@@ -20,7 +20,7 @@ class bcolors:
     ENDC = '\033[0m'
     
 ######################################
-print bcolors.FAIL
+print (bcolors.FAIL)
 print '\t\t\t\t  _____  _                  _____    _____     ____  '
 print '\t\t\t\t |  __ \| |                |  __ \  |  __ \   / __ \ '
 print '\t\t\t\t | |__) | |  _ __     ___  | |__) | | |__) | | |  | |'
