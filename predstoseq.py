@@ -6,7 +6,7 @@ Author : Urminder Singh
 email: urmind13_sit@jnu.ac.in
 UrMi 3/5/16
 '''
-from __future__ import division
+
 import sys
 import getopt
 #import math
@@ -24,13 +24,13 @@ try:
 	opts, args = getopt.getopt(sys.argv[1:],"hf:o:p:l:s:r:",["ifile=","ofile=","min=","max="])
 	#print opts
 except getopt.GetoptError:
-	print 'predstoseq.py -f <input fastafile> -o <outputfile> -p <predictionfile> -l <required label default:0> -s <class_prob_cutoff, default:0> -m <min_length, default:0> <max_length, default:inf>'
+	print('predstoseq.py -f <input fastafile> -o <outputfile> -p <predictionfile> -l <required label default:0> -s <class_prob_cutoff, default:0> -m <min_length, default:0> <max_length, default:inf>')
 	sys.exit(2)
 for opt, arg in opts:
 	if opt == '-h':
-		print 'Use this to extract lncRNA or mRNA sequences, as predicted by PLNCPRO, from the input fasta file'
-		print 'Usage:'
-		print 'predstoseq.py -f <input fastafile> -o <outputfile> -p <predictionfile> -l <required label default:0> -s <class_prob_cutoff[range 0-1], default:0> -m <min_length, default:0> <max_length, default:inf>'
+		print('Use this to extract lncRNA or mRNA sequences, as predicted by PLNCPRO, from the input fasta file')
+		print('Usage:')
+		print('predstoseq.py -f <input fastafile> -o <outputfile> -p <predictionfile> -l <required label default:0> -s <class_prob_cutoff[range 0-1], default:0> -m <min_length, default:0> <max_length, default:inf>')
 		sys.exit()
 	elif opt in ("-f", "--ifile"):
 		#print 'infile found'
@@ -58,19 +58,19 @@ for opt, arg in opts:
 		#print 'max found'
 
 if cutoff>1 or cutoff<0:
-	print 'please enter probability value in range [0,1]'
+	print('please enter probability value in range [0,1]')
 	sys.exit()
 if max_len<=min_len:
-	print 'Error: check min and max len'
+	print('Error: check min and max len')
 	sys.exit()
 if label != '0' and label != '1':
-	print 'Please check lablel is 0 or 1'
+	print('Please check lablel is 0 or 1')
 	sys.exit()
 
-print '**********Extracting Sequences***************'
-print 'class prob cutoff='+ str(cutoff)
-print 'min length cutoff='+ str(min_len)
-print 'max length cutoff='+ str(max_len)
+print('**********Extracting Sequences***************')
+print('class prob cutoff='+ str(cutoff))
+print('min length cutoff='+ str(min_len))
+print('max length cutoff='+ str(max_len))
 
 #label=sys.argv[4]
 #open preds file
@@ -85,13 +85,13 @@ for l in content:
 	elif label=='0':
 		tocheck=float(l.split('\t')[3])
 	else:
-		print 'check label\nError'
+		print('check label\nError')
 		sys.exit(0)
 	
 	if l.split('\t')[1]==label:
 		if cutoff <= tocheck :
 			idlist.append(l.split('\t')[0])
-print 'Total sequences in prediction file with label '+label+' and class prob >= '+str(cutoff)+', were: '+str(len(idlist))
+print('Total sequences in prediction file with label '+label+' and class prob >= '+str(cutoff)+', were: '+str(len(idlist)))
 ctr=0
 min_len_filter=0
 max_len_filter=0
@@ -118,11 +118,11 @@ for record in SeqIO.parse(inputfile, "fasta"):
 		
 	
 	
-print 'Total filtered due to length < '+str(min_len)+', were: '+str(min_len_filter)
-print 'Total filtered due to length > '+str(max_len)+', were: '+str(max_len_filter)
-print 'Sequences not found in the fasta file were: '+str(len(idlist)-ctr-min_len_filter-max_len_filter)
+print('Total filtered due to length < '+str(min_len)+', were: '+str(min_len_filter))
+print('Total filtered due to length > '+str(max_len)+', were: '+str(max_len_filter))
+print('Sequences not found in the fasta file were: '+str(len(idlist)-ctr-min_len_filter-max_len_filter))
 if len(idlist)-ctr-min_len_filter-max_len_filter>0:
-	print 'WARNING:'
-	print 'Please check input fasta as '+str(len(idlist)-ctr-min_len_filter-max_len_filter)+ ' sequences in the prediction file did not match to any sequences in fasta file'
-print 'Total sequences written: '+str(ctr)
-print 'File '+outputfile+' saved!'
+	print('WARNING:')
+	print('Please check input fasta as '+str(len(idlist)-ctr-min_len_filter-max_len_filter)+ ' sequences in the prediction file did not match to any sequences in fasta file')
+print('Total sequences written: '+str(ctr))
+print('File '+outputfile+' saved!')

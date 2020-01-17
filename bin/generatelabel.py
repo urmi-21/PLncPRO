@@ -7,6 +7,6 @@ e.g. python generatelabel.py 200 200 > labels.txt
 '''
 import sys
 for i in range(int(sys.argv[1])):
-	print 1
+	print(1)
 for i in range(int(sys.argv[2])):
-	print 0
+	print(0)

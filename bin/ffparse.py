@@ -6,7 +6,7 @@ Author : Urminder Singh
 email: urmind13_sit@jnu.ac.in
 UrMi 14/1/2016
 '''
-from __future__ import division
+
 import sys
 import math
 import re

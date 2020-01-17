@@ -7,7 +7,7 @@ email: urmind13_sit@jnu.ac.in
 UrMi 13/1/16
 '''
 ##Note to self:This file is a mess please refractor
-from __future__ import division
+
 import sys
 #import math
 #import re
@@ -256,7 +256,7 @@ def gethexmatrix(seq):
 label=int(sys.argv[2])
 
 if label != 1 and label!=0:
-	print 'please check label value; 0 or 1'
+	print('please check label value; 0 or 1')
 	sys.exit(0)
 fname=sys.argv[1]+'_features'
 f=open(fname,'w')

@@ -9,13 +9,13 @@ argv[4]-->if know labels are present
 argv[5]--> known label filename
 UrMi 23/01/2016
 '''
-from __future__ import division
+
 from sklearn.ensemble import RandomForestClassifier
 from numpy import genfromtxt, savetxt
 import numpy as np
 import math
 import sys
-import cPickle
+import pickle
 import os
 from sklearn.metrics import classification_report
 from sklearn.metrics import roc_curve, auc
@@ -42,7 +42,7 @@ def main():
 	target = [x[0] for x in dataset] # not required for prediction
 	X = [x[2:] for x in dataset]
 	with open(sys.argv[2], 'rb') as f:
-		rf = cPickle.load(f)
+		rf = pickle.load(f)
 		preds = rf.predict(X)
 		preds_prob= rf.predict_proba(X)
 
@@ -58,8 +58,8 @@ def main():
 		else:
 			num_pos=num_pos+1
 
-	print '\t\tPredicted as neg: '+str(num_neg)+': '+str(num_neg/len(preds))
-	print '\t\tPredicted as pos: '+str(num_pos)+': '+str(num_pos/len(preds))
+	print('\t\tPredicted as neg: '+str(num_neg)+': '+str(num_neg/len(preds)))
+	print('\t\tPredicted as pos: '+str(num_pos)+': '+str(num_pos/len(preds)))
 
 	#write predictions to file
 	#fname=os.path.dirname(sys.argv[1])+'/'+sys.argv[3]
@@ -69,7 +69,7 @@ def main():
 		f.write(str(seqids[i])+'\t'+str(int(preds[i]))+'\t'+str(float(preds_prob[i][1]))+'\t'+str(float(preds_prob[i][0]))+'\n')
 	#print 'Predictions written to file: '+fname
 	if('true' in sys.argv[4]):
-		print '\t\tCalculating Performance of Classifier...'
+		print('\t\tCalculating Performance of Classifier...')
 		#read file with known labels
 		label=[]
 		with open(sys.argv[5]) as f:
@@ -81,7 +81,7 @@ def main():
 		#print 'len preds=',str(len(preds))
 		#print 'len label=',str(len(label))
 		if not(len(preds) == len(label)):
-			print 'Error, Num of labels does not match Num of examples'
+			print('Error, Num of labels does not match Num of examples')
 			sys.exit(1)
 		
 		#start calculation
@@ -101,25 +101,25 @@ def main():
 			elif label[i]==0 and preds[i]==1:
 				fp=fp+1
 			else:
-				print 'Error in Predictions!!!'
+				print('Error in Predictions!!!')
 				sys.exit(1)
 		p=tp+fn
 		n=tn+fp
-		print bcolors.FAIL
+		print(bcolors.FAIL)
 
-		print '\t\t\tPrediction'
-		print '\t'+str('_______________________________________________________________')
-		print '\t\t'+str('Pos')+'\t|\t'+str('Neg')+'\t|\t'+str('Total')
-		print '\t\t'+str(tp)+'\t|\t'+str(fn)+'\t|\t'+str(p)
-		print '\t\t'+str(fp)+'\t|\t'+str(tn)+'\t|\t'+str(n)
-		print '\t'+str('_______________________________________________________________')
+		print('\t\t\tPrediction')
+		print('\t'+str('_______________________________________________________________'))
+		print('\t\t'+str('Pos')+'\t|\t'+str('Neg')+'\t|\t'+str('Total'))
+		print('\t\t'+str(tp)+'\t|\t'+str(fn)+'\t|\t'+str(p))
+		print('\t\t'+str(fp)+'\t|\t'+str(tn)+'\t|\t'+str(n))
+		print('\t'+str('_______________________________________________________________'))
 
-		print '\t\tp:',str(p)
-		print '\t\tn:',str(n)
-		print '\t\ttp:',str(tp)
-		print '\t\ttn:',str(tn)
-		print '\t\tfp:',str(fp)
-		print '\t\tfn:',str(fn)
+		print('\t\tp:',str(p))
+		print('\t\tn:',str(n))
+		print('\t\ttp:',str(tp))
+		print('\t\ttn:',str(tn))
+		print('\t\tfp:',str(fp))
+		print('\t\tfn:',str(fn))
 		
 		try:		
 			sens=tp/p
@@ -139,10 +139,10 @@ def main():
 		except ZeroDivisionError:
 			#print "division by zero...can't calculate MCC"
 			mcc='NaN'
-		print '\t\tAcc=',str(acc)
-		print '\t\tSens=',str(sens)
-		print '\t\tSpc=',str(spc)
-		print '\t\tMCC=',str(mcc)		
+		print('\t\tAcc=',str(acc))
+		print('\t\tSens=',str(sens))
+		print('\t\tSpc=',str(spc))
+		print('\t\tMCC=',str(mcc))		
 		
 		#for i in range(len(seqids)):
 		#	print seqids[i],preds[i],label[i]
@@ -153,8 +153,8 @@ def main():
 		#print len(fpr),len(tpr)
 		# Calculate the AUC
 		roc_auc = auc(fpr, tpr)
-		print '\t\tROC AUC: %0.4f' % roc_auc
- 		print bcolors.ENDC
+		print('\t\tROC AUC: %0.4f' % roc_auc)
+ 		print(bcolors.ENDC)
 		
 if __name__=="__main__":
 	main()

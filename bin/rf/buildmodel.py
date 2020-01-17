@@ -4,13 +4,13 @@ The label is the first column of each file and first line contains the feature n
 Files are give as arguments and a third argument id fo model name used to save model to file
 UrMi 23/01/2016
 '''
-from __future__ import division
+
 from sklearn.ensemble import RandomForestClassifier
 from numpy import genfromtxt, savetxt
 import numpy as np
 import math
 import sys
-import cPickle
+import pickle
 import os
 
 class bcolors:
@@ -47,7 +47,7 @@ def main():
 	#print 'oob=',str(oobscore)
 	model_fname=os.path.dirname(sys.argv[1])+'/'+sys.argv[2]
 	with open(model_fname, 'wb') as f:
-		cPickle.dump(rf, f)
+		pickle.dump(rf, f)
 	#build model num_iterations times and save with highest oob score
 	for i in range(num_iterations):
 		rf = RandomForestClassifier(n_estimators=num_trees,oob_score=True,n_jobs=num_threads)
@@ -58,13 +58,13 @@ def main():
 			oobscore=thisoobscore
 			#print 'writing to file...'
 			with open(model_fname, 'wb') as f:
-				cPickle.dump(rf, f)
-	print bcolors.HEADER+'****************************************************************Model Details****************************************************************'		+ bcolors.ENDC
+				pickle.dump(rf, f)
+	print(bcolors.HEADER+'****************************************************************Model Details****************************************************************'		+ bcolors.ENDC)
 	#print '\t\t\t\t\tFinal oob score=:',str(oobscore)
-	print bcolors.OKBLUE + "\t\t\t\t\tFinal oob score=: "+str(oobscore) + bcolors.ENDC
-	print bcolors.OKBLUE + "\t\t\t\t\tUse this model with the predict program\n\t\t\t\t\tRelative feature importance:\n"+ bcolors.ENDC
-	for f in sorted(zip(map(lambda x: round(x, 4), rf.feature_importances_), features),reverse=True):
-		print f,
+	print(bcolors.OKBLUE + "\t\t\t\t\tFinal oob score=: "+str(oobscore) + bcolors.ENDC)
+	print(bcolors.OKBLUE + "\t\t\t\t\tUse this model with the predict program\n\t\t\t\t\tRelative feature importance:\n"+ bcolors.ENDC)
+	for f in sorted(zip([round(x, 4) for x in rf.feature_importances_], features),reverse=True):
+		print(f, end=' ')
 '''in prediction file
 with open('path/to/file', 'rb') as f:
     rf = cPickle.load(f)

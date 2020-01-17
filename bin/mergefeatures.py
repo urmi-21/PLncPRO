@@ -15,7 +15,7 @@ Author : Urminder Singh
 email: urmind13_sit@jnu.ac.in
 UrMi 14/1/2016
 '''
-from __future__ import division
+
 import sys
 #import math
 #import re
@@ -33,7 +33,7 @@ if no_framefinder_flag=='false':
 	#check that featuredata and content are of same length
 
 	if len(featuredata)!=len(content):
-		print 'error in framefinder file\nPlease check framefinder output file...'
+		print('error in framefinder file\nPlease check framefinder output file...')
 		sys.exit(0)
 	elif len(featuredata)==len(content):
 		#print 'data_good'

@@ -11,14 +11,14 @@ Author : Urminder Singh
 email: urmind13_sit@jnu.ac.in
 UrMi 5/2/16
 '''
-from __future__ import division
+
 import sys
 import math
 import re
 import threading
 from collections import OrderedDict
-import Queue
-import urllib2
+import queue
+import urllib.request, urllib.error, urllib.parse
 from random import randint
 import time
 start_time = time.time()

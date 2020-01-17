@@ -1,3 +1,4 @@
+*.bak
 #unzipped models
 models/
 # Byte-compiled / optimized / DLL files
