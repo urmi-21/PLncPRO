@@ -47,7 +47,7 @@ def printhelp():
 	print ("-v     show more messages")	
 	print ("--min_len     specifiy min_length to filter input files")
 	print ("--noblast     Don't use blast features")
-	print ("-no_ff     Don't use framefinder features")
+	print ("--no_ff     Don't use framefinder features")
 	print ("--qcov_hsp     specify qcov parameter for blast[default:30]")
 	print ("--blastres     path to blast output for input file")
 	
@@ -258,7 +258,7 @@ if noblast_flag==False:
 		blastres_pos=in_file+"_blastres"
 		if vflag:
 			print ('Running BLASTX...This might take some time depending on your input.')
-		bcommand="lib/blast/bin/blastx -query "+in_file+" -db "+blastdb+" -outfmt '6 qseqid sseqid pident evalue qcovs qcovhsp score bitscore qframe sframe' -out "+blastres_pos+" -qcov_hsp_perc "+ str(max_qcov_hsp)+" -num_threads "+str(num_threads)
+		bcommand="blastx -query "+in_file+" -db "+blastdb+" -outfmt '6 qseqid sseqid pident evalue qcovs qcovhsp score bitscore qframe sframe' -out "+blastres_pos+" -qcov_hsp_perc "+ str(max_qcov_hsp)+" -num_threads "+str(num_threads)
 		print((str(bcommand)))
 		os.system(str(bcommand))
 		if vflag:

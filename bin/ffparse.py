@@ -15,7 +15,15 @@ import re
 
 #open framefinder output file
 with open(sys.argv[1]) as f:
-	content=f.readlines()
+    content=f.read().splitlines()
+
+#f= open(sys.argv[1])
+#content=[]
+#for line in f:
+#    print (line.replace(r'\r',''))
+#    print("%^$#%#")
+#f.close()
+    
 #ignore firstline
 content.pop(0)
 #store for each sequence
@@ -24,19 +32,23 @@ ffscore=[]
 orfcoverage=[]
 
 for line in content:
-	if '>' in line:
-		qids.append(line.split(' ')[0].split('>')[1])
-		#print line
-		#extract score
-		#[framefinder (3,2109) score=273.82 used=99.86% {forward,strict} ]
-		#match = re.search(r'score=([\-\d]\d+.\d+)',line)
-		match = re.search(r'score=(\d+.\d+)',line)  
-		#print match.group(1)
-		ffscore.append(float(match.group(1)))
-		#extract coverage
-		match = re.search(r'used=(\d+.\d+)',line) 
-		#print match.group(1)
-		orfcoverage.append(float(match.group(1)))
+    line.replace(r'\r','')
+    #print("&^%#^&#:"+line)
+    if '>' in line and "{" in line:
+        print("&^%#^&#:"+line)
+        qids.append(line.split(' ')[0].split('>')[1])
+        print("qid:"+line.split(' ')[0].split('>')[1])
+        #print line
+        #extract score
+        #[framefinder (3,2109) score=273.82 used=99.86% {forward,strict} ]
+        #match = re.search(r'score=([\-\d]\d+.\d+)',line)
+        match = re.search(r'score=(\d+.\d+)',line)  
+        #print match.group(1)
+        ffscore.append(float(match.group(1)))
+        #extract coverage
+        match = re.search(r'used=(\d+.\d+)',line) 
+        #print match.group(1)
+        orfcoverage.append(float(match.group(1)))
 
 #print qids,ffscore,orfcoverage
 
@@ -45,6 +57,6 @@ fname=sys.argv[1]+'_framefinderfeatures'
 f = open(fname,'w')
 f.write(str('seqid')+'\t'+str('score')+'\t'+str('orf_coverage')+'\n')
 for i in range(len(qids)):
-	f.write(str(qids[i])+'\t'+str(ffscore[i])+'\t'+str(orfcoverage[i])+'\n')
+    f.write(str(qids[i])+'\t'+str(ffscore[i])+'\t'+str(orfcoverage[i])+'\n')
 #print 'file: '+fname+' writen'
 
