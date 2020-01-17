@@ -67,7 +67,9 @@ sequence.
 python prediction.py -i input_fasta_file -o output_file -p output_file_name -t number_of_threads 
    -d path_to_blastdb -m path_to_model_file
 
-		PARAMETERS
+### PARAMETERS
+
+```	
 -p,--prediction_out	output file name
 -i,--infile		file containing input sequences
 -m,--model		model file
@@ -84,7 +86,7 @@ python prediction.py -i input_fasta_file -o output_file -p output_file_name -t n
 --qcov_hsp		specify query coverage parameter for blast[default:30]
 --blastres*		path to blast output for input file
 *blast result should be in following format: -outfmt '6 qseqid sseqid pident evalue qcovs qcovhsp score bitscore qframe sframe'
-   
+```
 Examples: 
 1. $ python prediction.py -i sample_data/test/neg.fa -p pred_res -o sample_preds -m sample_out/sample_model -d lib/blastdb/sprotdb/sprotdb -t 10
 
@@ -103,7 +105,7 @@ Examples:
 
    
      
-==========================================================================================================
+
 
 Usage of build.py -- used to build model using the given training data
 (mRNA/lncRNA transcripts). This file reads two labelled datasets
