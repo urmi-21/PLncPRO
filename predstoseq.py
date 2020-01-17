@@ -68,9 +68,9 @@ if label != '0' and label != '1':
 	sys.exit()
 
 print('**********Extracting Sequences***************')
-print('class prob cutoff='+ str(cutoff))
-print('min length cutoff='+ str(min_len))
-print('max length cutoff='+ str(max_len))
+print(('class prob cutoff='+ str(cutoff)))
+print(('min length cutoff='+ str(min_len)))
+print(('max length cutoff='+ str(max_len)))
 
 #label=sys.argv[4]
 #open preds file
@@ -91,7 +91,7 @@ for l in content:
 	if l.split('\t')[1]==label:
 		if cutoff <= tocheck :
 			idlist.append(l.split('\t')[0])
-print('Total sequences in prediction file with label '+label+' and class prob >= '+str(cutoff)+', were: '+str(len(idlist)))
+print(('Total sequences in prediction file with label '+label+' and class prob >= '+str(cutoff)+', were: '+str(len(idlist))))
 ctr=0
 min_len_filter=0
 max_len_filter=0
@@ -118,11 +118,11 @@ for record in SeqIO.parse(inputfile, "fasta"):
 		
 	
 	
-print('Total filtered due to length < '+str(min_len)+', were: '+str(min_len_filter))
-print('Total filtered due to length > '+str(max_len)+', were: '+str(max_len_filter))
-print('Sequences not found in the fasta file were: '+str(len(idlist)-ctr-min_len_filter-max_len_filter))
+print(('Total filtered due to length < '+str(min_len)+', were: '+str(min_len_filter)))
+print(('Total filtered due to length > '+str(max_len)+', were: '+str(max_len_filter)))
+print(('Sequences not found in the fasta file were: '+str(len(idlist)-ctr-min_len_filter-max_len_filter)))
 if len(idlist)-ctr-min_len_filter-max_len_filter>0:
 	print('WARNING:')
-	print('Please check input fasta as '+str(len(idlist)-ctr-min_len_filter-max_len_filter)+ ' sequences in the prediction file did not match to any sequences in fasta file')
-print('Total sequences written: '+str(ctr))
-print('File '+outputfile+' saved!')
+	print(('Please check input fasta as '+str(len(idlist)-ctr-min_len_filter-max_len_filter)+ ' sequences in the prediction file did not match to any sequences in fasta file'))
+print(('Total sequences written: '+str(ctr)))
+print(('File '+outputfile+' saved!'))

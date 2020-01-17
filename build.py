@@ -25,14 +25,14 @@ class bcolors:
     ENDC = '\033[0m'
     
 ######################################
-print(bcolors.FAIL)
+print((bcolors.FAIL))
 print('\t\t\t\t  _____  _                  _____    _____     ____  ')
 print('\t\t\t\t |  __ \| |                |  __ \  |  __ \   / __ \ ')
 print('\t\t\t\t | |__) | |  _ __     ___  | |__) | | |__) | | |  | |')
 print('\t\t\t\t |  ___/| | |  _ \   / __| |  ___/  |  _  /  | |  | |')
 print('\t\t\t\t | |    | | | | | | | (__  | |      | | \ \  | |__| |')
 print('\t\t\t\t |_|    |_| |_| |_|  \___| |_|      |_|  \_\  \____/ ')
-print(bcolors.ENDC)
+print((bcolors.ENDC))
 ###########Define Funcs###############
 def printhelp():
                                           
@@ -186,16 +186,16 @@ if model_name=="":
 model_file=outdir+'/'+model_name
 
 if (os.path.isfile(model_file) ):
-	print('Error... model file already exists: '+model_file+'\nTo replace enter y, or n to cancel')
-	opt=input('Replace model (y/n):')
+	print(('Error... model file already exists: '+model_file+'\nTo replace enter y, or n to cancel'))
+	opt=eval(input('Replace model (y/n):'))
 	if opt=='n':
 		sys.exit(0)
 #check pos,neg exists
 if not (os.path.isfile(pos_file) ):
-	print('Please check pos file...Error file:'+pos_file+ ' doesn\'t exist')
+	print(('Please check pos file...Error file:'+pos_file+ ' doesn\'t exist'))
 	sys.exit(0)
 if not (os.path.isfile(neg_file) ):
-	print('Please check neg file...Error file:'+neg_file+' doesn\'t exist')
+	print(('Please check neg file...Error file:'+neg_file+' doesn\'t exist'))
 	sys.exit(0)
 
 ##check blast database
@@ -207,17 +207,17 @@ if noblast_flag==False:
 ##check for blastres files
 if pos_blastres_flag==True:
 	if not (os.path.isfile(pos_blastres_file) ):
-		print('Please check pos_blastres file...Error file: '+pos_blastres_file+ ' doesn\'t exist')
+		print(('Please check pos_blastres file...Error file: '+pos_blastres_file+ ' doesn\'t exist'))
 		sys.exit(0)
 if neg_blastres_flag==True:
 	if not (os.path.isfile(neg_blastres_file) ):
-		print('Please check neg_blastres file...Error file: '+neg_blastres_file+ ' doesn\'t exist')
+		print(('Please check neg_blastres file...Error file: '+neg_blastres_file+ ' doesn\'t exist'))
 		sys.exit(0)
 
 if vflag:
 	print(outdir)
 	print(neg_file)
-	print(os.path.dirname(os.path.realpath(neg_file)))
+	print((os.path.dirname(os.path.realpath(neg_file))))
 
 #sys.exit(0)
 ####################################################################################################################
@@ -245,7 +245,7 @@ if min_len_flag==True:
 			SeqIO.write(record, output_handle, "fasta")
 		else:
 			short_ctr=short_ctr+1
-	print('Short Sequences <',str(min_length),str(short_ctr),' removed,',str(ctr),' retained')
+	print(('Short Sequences <',str(min_length),str(short_ctr),' removed,',str(ctr),' retained'))
 	neg_file=neg_file+'_temp'+str(min_length)
 	pos_file=pos_file+'_temp'+str(min_length)
 	print('New files with filtered sequences:')
@@ -284,7 +284,7 @@ if noblast_flag==False:
 		if vflag:
 			print('Running BLASTX...This might take some time depending on your input.')
 		bcommand="lib/blast/bin/blastx -query "+neg_file+" -db "+blastdb+" -outfmt '6 qseqid sseqid pident evalue qcovs qcovhsp score bitscore qframe sframe' -out "+blastres_neg+" -qcov_hsp_perc "+ str(max_qcov_hsp)+" -num_threads "+str(num_threads)
-		print(str(bcommand))
+		print((str(bcommand)))
 		os.system(str(bcommand))
 		if vflag:
 			print('Parsing Blast Results...')
@@ -335,7 +335,7 @@ if noblast_flag==False:
 		if vflag:
 			print('Running BLASTX...This might take some time depending on your input.')
 		bcommand="lib/blast/bin/blastx -query "+pos_file+" -db "+blastdb+" -outfmt '6 qseqid sseqid pident evalue qcovs qcovhsp score bitscore qframe sframe' -out "+blastres_pos+" -qcov_hsp_perc "+ str(max_qcov_hsp)+" -num_threads "+str(num_threads)
-		print(str(bcommand))
+		print((str(bcommand)))
 		os.system(str(bcommand))
 		if vflag:
 			print('Parsing Blast Results...')
@@ -406,5 +406,5 @@ if removefiles_flag==False:
 ##move model file
 os.system("mv "+neg_files_dir+"/"+model_name+" "+outdir)
 
-print('All outputs saved to: '+ outdir)
+print(('All outputs saved to: '+ outdir))
 print('END')

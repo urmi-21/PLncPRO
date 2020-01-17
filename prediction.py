@@ -20,14 +20,14 @@ class bcolors:
 	ENDC = '\033[0m'
     
 ######################################
-print (bcolors.FAIL)
+print((bcolors.FAIL))
 print ('\t\t\t\t  _____  _                  _____    _____     ____  ')
 print ('\t\t\t\t |  __ \| |                |  __ \  |  __ \   / __ \ ')
 print ('\t\t\t\t | |__) | |  _ __     ___  | |__) | | |__) | | |  | |')
 print ('\t\t\t\t |  ___/| | |  _ \   / __| |  ___/  |  _  /  | |  | |')
 print ('\t\t\t\t | |    | | | | | | | (__  | |      | | \ \  | |__| |')
 print ('\t\t\t\t |_|    |_| |_| |_|  \___| |_|      |_|  \_\  \____/ ')
-print (bcolors.ENDC)
+print((bcolors.ENDC))
 ###########Define Funcs###############
 def printhelp():
 	print ("*********************************************Help*********************************************")
@@ -170,15 +170,15 @@ if model_file=="":
 	sys.exit(0)
 #check if model exists
 if not (os.path.isfile(model_file) ):
-	print ('Please check model file...Error file:'+model_file+ ' doesn\'t exist')
+	print(('Please check model file...Error file:'+model_file+ ' doesn\'t exist'))
 	sys.exit(0)
 #check pos,neg exists
 if not (os.path.isfile(in_file) ):
-	print ('Please check input file...Error file:'+in_file+ ' doesn\'t exist')
+	print(('Please check input file...Error file:'+in_file+ ' doesn\'t exist'))
 	sys.exit(0)
 if lflag==True:
 	if not (os.path.isfile(label_file) ):
-		print ('Please check label file...Error file:'+label_file+ ' doesn\'t exist')
+		print(('Please check label file...Error file:'+label_file+ ' doesn\'t exist'))
 		sys.exit(0)
 
 ##check blast database
@@ -190,7 +190,7 @@ if noblast_flag==False:
 ##check for blastres files
 if blastres_flag==True:
 	if not (os.path.isfile(blastres_file) ):
-		print ('Please check blastres file...Error file: '+blastres_file+ ' doesn\'t exist')
+		print(('Please check blastres file...Error file: '+blastres_file+ ' doesn\'t exist'))
 		sys.exit(0)
 
 ####################################################################################################################
@@ -199,7 +199,7 @@ if blastres_flag==True:
 ##remove sequences with min length
 if min_len_flag==True:
 	print ('Removing short sequences........')
-	print ('minlen:',min_length)
+	print(('minlen:',min_length))
 	output_handle = open(in_file+'_temp_'+str(min_length), "w")
 	ctr=0
 	short_ctr=0
@@ -219,7 +219,7 @@ if min_len_flag==True:
 	SeqIO.write(temp_rec, output_handle, "fasta")
 	output_handle.close()		#important else gives errors
 	
-	print ('Short Sequences <',str(min_length),str(short_ctr),' removed,',str(ctr),' retained')
+	print(('Short Sequences <',str(min_length),str(short_ctr),' removed,',str(ctr),' retained'))
 	in_file=in_file+'_temp_'+str(min_length)
 	print ('New file with filtered sequences:')	
 	print (in_file)
@@ -259,7 +259,7 @@ if noblast_flag==False:
 		if vflag:
 			print ('Running BLASTX...This might take some time depending on your input.')
 		bcommand="lib/blast/bin/blastx -query "+in_file+" -db "+blastdb+" -outfmt '6 qseqid sseqid pident evalue qcovs qcovhsp score bitscore qframe sframe' -out "+blastres_pos+" -qcov_hsp_perc "+ str(max_qcov_hsp)+" -num_threads "+str(num_threads)
-		print (str(bcommand))
+		print((str(bcommand)))
 		os.system(str(bcommand))
 		if vflag:
 			print ('Parsing Blast Results...')
@@ -282,7 +282,7 @@ else:
 ##mergeboth files in one
 if vflag:
 	print ('Predicting...')
-print (str("python bin/rf/predict.py "+in_file+"_all_features "+model_file+" "+out_file+" "+lflag_val+" "+label_file))
+print((str("python bin/rf/predict.py "+in_file+"_all_features "+model_file+" "+out_file+" "+lflag_val+" "+label_file)))
 os.system("python bin/rf/predict.py "+in_file+"_all_features "+model_file+" "+out_file+" "+lflag_val+" "+label_file)
 
 ################Remove Temp Files##################
@@ -303,5 +303,5 @@ os.system("mv "+in_file+"_all_features"+" "+outdir+"/")
 os.system("mv "+in_file+"_blastres"+" "+outdir)
 os.system("mv "+out_file+" "+outdir)
 
-print ('All outputs saved to: '+ outdir)
+print(('All outputs saved to: '+ outdir))
 print ('END')
