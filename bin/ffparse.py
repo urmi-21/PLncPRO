@@ -8,11 +8,12 @@ UrMi 14/1/2016
 '''
 
 import sys
-import math
 import re
-#from Bio import SeqIO
-#from collections import OrderedDict
+import os
 
+
+#before opening fix ^M chars in file
+os.system("lib/framefinder/fixout.sh "+sys.argv[1])
 #open framefinder output file
 with open(sys.argv[1]) as f:
     content=f.read().splitlines()
@@ -32,12 +33,11 @@ ffscore=[]
 orfcoverage=[]
 
 for line in content:
-    line.replace(r'\r','')
-    #print("&^%#^&#:"+line)
+        
     if '>' in line and "{" in line:
-        print("&^%#^&#:"+line)
+        #print("&^%#^&#:"+line)
         qids.append(line.split(' ')[0].split('>')[1])
-        print("qid:"+line.split(' ')[0].split('>')[1])
+        #print("qid:"+line.split(' ')[0].split('>')[1])
         #print line
         #extract score
         #[framefinder (3,2109) score=273.82 used=99.86% {forward,strict} ]
