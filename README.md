@@ -21,8 +21,8 @@ Singh et. al. PLncPRO for prediction of long non-coding RNAs (lncRNAs) in plants
 #  INSTALLATION
 
 ## Pre-requisite: 
-1. OS: Linux
-2. Python 2.7.11 or later versions (http://www.python.org/)
+1. OS: Linux, macOS
+2. Python 3.5 or later versions (http://www.python.org/)
 	a.)NumPy (http://www.numpy.org/)
 	b.)SciPy (https://www.scipy.org/)
 	c.)Scikit-learn (http://scikit-learn.org/)
