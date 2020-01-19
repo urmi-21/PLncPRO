@@ -1,13 +1,4 @@
 
-|  PLNCPRO - 	Plant Long Non-Coding rna Prediction by Random fOrests |
-|  Author: 	Urminder Singh                                         |
-|  Contact: 	urmind13_sit@jnu.ac.in                                 |
-|  Website:     http://ccbb.jnu.ac.in/plncpro                          |
-|  Version: 	1.1                                                    |
-|  Updated on: 	July 18, 2016                                          |
-|                                                                      |
-
-
                           _____  _            _____  _____   ____  
                          |  __ \| |          |  __ \|  __ \ / __ \ 
                          | |__) | |_ __   ___| |__) | |__) | |  | |
@@ -18,10 +9,13 @@
 
 #  INTRODUCTION
 
-We have developed a program to classify coding (mRNAs) and long non-coding transcripts (lncRNAs).
+PlncPRO (Plant Long Non-Coding rna Prediction by Random fOrests) is a program to classify coding (mRNAs) and long non-coding transcripts (lncRNAs).
 Our method is based on random forest method and uses protein homology search, sequence based and 3-mer frequency based features. 
 We have developed predictive models for several plant species to predict lncRNAs. 
 We comprehensively tested our method on plants and vertebrates and found that our model works better as compared to the existing tools.
+
+## Citation
+Singh et. al. PLncPRO for prediction of long non-coding RNAs (lncRNAs) in plants and its application for discovery of abiotic stress-responsive lncRNAs in rice and chickpea. Nucleic Acids Res. 2017 Dec 15;45(22):e183. doi: 10.1093/nar/gkx866.
 
 
 #  INSTALLATION
@@ -37,20 +31,7 @@ We comprehensively tested our method on plants and vertebrates and found that ou
 4. GNU C Library (glibc >= 2.14)
 
 ## Steps:
-1. Install Python and the required modules
 
-2. Download PLNCPRO.1.0.tar.gz from http://localhost/lncRNAtool/
-   and extract the files.
-   $ tar zvxf plncpro.1.0.tar.gz
-
-3. make framefinder executable
-   * Go to directory plncpro/lib/estate	    
-   $ sudo make
-   * Copy framefinder executable to plncpro/lib/framefinder
-   $ cp bin/framefinder ../framefinder
-
-3. Setup BLAST.
-   * Put the blast binaries in folder plncpro/lib/blast/bin
 
   
 #  USAGE AND EXAMPLES
