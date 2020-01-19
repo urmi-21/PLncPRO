@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/urmi-21/PLncPRO.svg?branch=master)](https://travis-ci.org/urmi-21/PLncPRO)
+
 
                           _____  _            _____  _____   ____  
                          |  __ \| |          |  __ \|  __ \ / __ \ 

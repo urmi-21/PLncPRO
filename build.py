@@ -186,10 +186,8 @@ if model_name=="":
 model_file=outdir+'/'+model_name
 
 if (os.path.isfile(model_file) ):
-    print(('Error... model file already exists: '+model_file+'\nTo replace enter y, or n to cancel'))
-    opt=eval(input('Replace model (y/n):'))
-    if opt=='n':
-        sys.exit(0)
+    print(('Error... model file already exists: '+model_file+'\nExiting...'))
+    sys.exit(0)
 #check pos,neg exists
 if not (os.path.isfile(pos_file) ):
     print(('Please check pos file...Error file:'+pos_file+ ' doesn\'t exist'))
