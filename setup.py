@@ -42,7 +42,13 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/urmi-21/PLncPRO",
     packages=setuptools.find_packages(),
-    scripts=['prediction.py','predstoseq.py','build.py'],
+    scripts=[],
+    entry_points={
+            'console_scripts': [
+                    'plncpro = plncpro.__main__:main'
+                    
+                    ]
+            },
     install_requires=[line.rstrip() for line in open("requirements.txt", "rt")],
     tests_require=["pytest"],
     classifiers=[
