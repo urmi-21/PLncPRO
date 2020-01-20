@@ -22,4 +22,4 @@ before_script:
 script:
   - ls
   #- travis_wait 40 coverage run -m pytest tests/
-  - bash tests/test_build.sh
+  - bash tests/test.sh
