@@ -31,7 +31,7 @@ def main():
 	num_threads=int(sys.argv[4])
 	#read files and save in two diff datasets
 	#read first line from both files and check for consistency
-	features=genfromtxt(open(sys.argv[1],'r'), delimiter='\t', dtype=None)[0]
+	features=genfromtxt(open(sys.argv[1],'r'), delimiter='\t', dtype=None,encoding=None)[0]
 	features=features[2:]
 	#read file
 	dataset = genfromtxt(open(sys.argv[1],'r'), delimiter='\t', dtype='f8')[1:]

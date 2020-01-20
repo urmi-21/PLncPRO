@@ -33,9 +33,9 @@ class bcolors:
 def main():
     
     #read first line from both files and check for consistency
-    features=genfromtxt(open(sys.argv[1],'r'), delimiter='\t', dtype=None)[0]
+    features=genfromtxt(open(sys.argv[1],'r'), delimiter='\t', dtype=None,encoding=None)[0]
     features=features[2:]
-    text=genfromtxt(open(sys.argv[1],'r'), delimiter='\t', dtype=None)[1:]
+    text=genfromtxt(open(sys.argv[1],'r'), delimiter='\t', dtype=None,encoding=None)[1:]
     seqids=[x[1] for x in text]    
     #read file
     dataset = genfromtxt(open(sys.argv[1],'r'), delimiter='\t', dtype='f8')[1:]
