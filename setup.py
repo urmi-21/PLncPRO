@@ -42,7 +42,10 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/urmi-21/PLncPRO",
     packages=setuptools.find_packages(),
-    scripts=[],
+    package_data={#add framefinder files
+            "": ["*.model", "framefinder", "plncpro_format_ff.sh"]
+            },
+    scripts=['plncpro/scripts/plncpro_format_ff.sh'],
     entry_points={
             'console_scripts': [
                     'plncpro = plncpro.__main__:main'

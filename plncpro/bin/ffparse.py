@@ -13,7 +13,7 @@ import os
 
 
 #before opening fix ^M chars in file
-os.system("lib/framefinder/fixout.sh "+sys.argv[1])
+os.system("plncpro_format_ff.sh "+sys.argv[1])
 #open framefinder output file
 with open(sys.argv[1]) as f:
     content=f.read().splitlines()

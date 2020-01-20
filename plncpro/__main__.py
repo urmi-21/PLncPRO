@@ -11,10 +11,15 @@ plncpro main script
 
 
 import sys
+
 import plncpro.prediction
 import plncpro.build
 import plncpro.predstoseq
+import inspect
+import os
 
+#get the home directory to plncpro
+plncpro_home=os.path.dirname(os.path.realpath(inspect.getfile(plncpro.prediction)))
 
 
 ######################################
@@ -45,15 +50,18 @@ def main():
         
     if thisCommand not in validCommands:
         print("Valid commands are:\t"+"\t".join(validCommands))
+    
     elif thisCommand==validCommands[0]:
-        print ("calling predict")
-        plncpro.prediction.main()
+        #print ("calling predict")
+        plncpro.prediction.main(home=plncpro_home)
         
     elif thisCommand==validCommands[1]:
-        plncpro.build.main()
+        #Build
+        plncpro.build.main(home=plncpro_home)
         
     elif thisCommand==validCommands[2]:
-        print ("calling predtos")
+        #predto seq
+        plncpro.predstoseq.main(home=plncpro_home)
     
 
 if __name__ == "__main__":

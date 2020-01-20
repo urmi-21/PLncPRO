@@ -39,7 +39,9 @@ def printhelp():
     print ("--blastres     path to blast output for input file")
     
     
-def main():
+def main(args = sys.argv,home=None):
+    
+    
     ######################################
     ############Define variables##############
     in_flag=False
@@ -72,7 +74,7 @@ def main():
     label_file=""
     #####################################
     try:
-        opts, args = getopt.getopt(sys.argv[1:],"ht:i:rm:p:o:d:vl:",["prediction_out=","infile=","noblast","no_ff","qcov_hsp=","threads=","db=","outdir=","model=","remove_temp","blastres=","labels=","min_len="])
+        opts, args = getopt.getopt(sys.argv[2:],"ht:i:rm:p:o:d:vl:",["prediction_out=","infile=","noblast","no_ff","qcov_hsp=","threads=","db=","outdir=","model=","remove_temp","blastres=","labels=","min_len="])
     except getopt.GetoptError:
         printhelp()
         sys.exit(2)
@@ -222,7 +224,8 @@ def main():
 ############################################Read in file###############################################################
     if vflag:
         print ('Reading Input File...\nExtracting Features...')
-        os.system("python bin/extractfeatures.py "+in_file+" 1")
+    
+    os.system("python "+home+"/bin/extractfeatures.py "+in_file+" 1")
 
     ########Run framefinder
     ff_featurefile_pos=in_file+"_ffout_framefinderfeatures"
@@ -232,11 +235,11 @@ def main():
 
     else:
         #print "lib/framefinder/framefinder -r False -w lib/framefinder/framefinder.model "+in_file+" > "+in_file+"_ffout"
-        os.system("lib/framefinder/framefinder -r False -w lib/framefinder/framefinder.model "+in_file+" > "+in_file+"_ffout")
+        os.system(home+"/lib/framefinder/framefinder -r False -w "+home+"/lib/framefinder/framefinder.model "+in_file+" > "+in_file+"_ffout")
         #parse framefinder results and write framefinder feature files
         if vflag:
             print ('Extracting Framefinder Features...')
-        os.system("python bin/ffparse.py "+in_file+"_ffout")
+        os.system("python "+home+"/bin/ffparse.py "+in_file+"_ffout")
 
     ######Run BLASTX########
     if noblast_flag==False:
@@ -244,12 +247,12 @@ def main():
             if vflag:
                 print ('Parsing Blast results...\nExtracting Features...')
                 
-            os.system("python bin/blastparse_mt3.py "+blastres_file)
+            os.system("python "+home+"/bin/blastparse_mt3.py "+blastres_file)
             
             if vflag:
                 print ('Merging all Features...')
                 
-            os.system("python bin/mergefeatures.py "+in_file+"_features "+no_ff_flagval+" "+ff_featurefile_pos+" "+noblast_flag_val+" "+blastres_file+"_blastfeatures "+" "+in_file+"_all_features")
+            os.system("python "+home+"/bin/mergefeatures.py "+in_file+"_features "+no_ff_flagval+" "+ff_featurefile_pos+" "+noblast_flag_val+" "+blastres_file+"_blastfeatures "+" "+in_file+"_all_features")
             
         else:
             #filename for blastres
@@ -262,18 +265,18 @@ def main():
             if vflag:
                 print ('Parsing Blast Results...')
 
-            os.system("python bin/blastparse_mt3.py "+blastres_pos)
+            os.system("python "+home+"/bin/blastparse_mt3.py "+blastres_pos)
             print ('Merging all Features...')
-            os.system("python bin/mergefeatures.py "+in_file+"_features "+no_ff_flagval+" "+ff_featurefile_pos+" "+noblast_flag_val+" "+blastres_pos+"_blastfeatures "+" "+in_file+"_all_features")
+            os.system("python "+home+"/bin/mergefeatures.py "+in_file+"_features "+no_ff_flagval+" "+ff_featurefile_pos+" "+noblast_flag_val+" "+blastres_pos+"_blastfeatures "+" "+in_file+"_all_features")
 
     else:
         if vflag:
             print ('Skipping Blast...')
         blastres_pos=in_file+"_blastres"
         os.system("echo 'X    X    0    0    0    0    0    0    0    0' > "+blastres_pos)
-        os.system("python bin/blastparse_mt3.py "+blastres_pos)
+        os.system("python "+home+"/bin/blastparse_mt3.py "+blastres_pos)
         print ('Merging all Features...')
-        os.system("python bin/mergefeatures.py "+in_file+"_features "+no_ff_flagval+" "+ff_featurefile_pos+" "+noblast_flag_val+" "+blastres_pos+"_blastfeatures "+" "+in_file+"_all_features")    
+        os.system("python "+home+"/bin/mergefeatures.py "+in_file+"_features "+no_ff_flagval+" "+ff_featurefile_pos+" "+noblast_flag_val+" "+blastres_pos+"_blastfeatures "+" "+in_file+"_all_features")    
 
 #########################################################################################################################
 ##############################################Start prediction###########################################################
@@ -281,8 +284,8 @@ def main():
     if vflag:
         print ('Predicting...')
         
-    print((str("python bin/rf/predict.py "+in_file+"_all_features "+model_file+" "+out_file+" "+lflag_val+" "+label_file)))
-    os.system("python bin/rf/predict.py "+in_file+"_all_features "+model_file+" "+out_file+" "+lflag_val+" "+label_file)
+    print((str("python "+home+"/bin/rf/predict.py "+in_file+"_all_features "+model_file+" "+out_file+" "+lflag_val+" "+label_file)))
+    os.system("python "+home+"/bin/rf/predict.py "+in_file+"_all_features "+model_file+" "+out_file+" "+lflag_val+" "+label_file)
 
 ################Remove Temp Files##################
     if removefiles_flag==True:

@@ -50,7 +50,10 @@ def printhelp():
 
 
 
-def main(args = sys.argv):
+def main(args = sys.argv,home=None):
+    if home==None:
+        print("ERROR HOME")
+    print("HOME="+home)
     print("ARGS::"+str(args))
     print("os::"+str(os.getcwd()))
     ######################################
@@ -250,7 +253,7 @@ def main(args = sys.argv):
 ############################################Read neg file############################################################
     if vflag:
         print('Reading Negative File...\nExtracting Features...')
-    os.system("python bin/extractfeatures.py "+neg_file+" 0")
+    os.system("python "+home+"/bin/extractfeatures.py "+neg_file+" 0")
 
     ########Run framefinder
     ff_featurefile_neg=neg_file+"_ffout_framefinderfeatures"
@@ -259,21 +262,21 @@ def main(args = sys.argv):
         os.system("echo '' > "+neg_file+"_ffout")
 
     else:
-        os.system("lib/framefinder/framefinder -r False -w lib/framefinder/framefinder.model "+neg_file+" > "+neg_file+"_ffout")
+        os.system(home+"/lib/framefinder/framefinder -r False -w "+home+"/lib/framefinder/framefinder.model "+neg_file+" > "+neg_file+"_ffout")
         #parse framefinder results and write framefinder feature files
         if vflag:
             print('Extracting Framefinder Features...')
-        os.system("python bin/ffparse.py "+neg_file+"_ffout")
+        os.system("python "+home+"/bin/ffparse.py "+neg_file+"_ffout")
 
     ######Run BLASTX########
     if noblast_flag==False:
         if neg_blastres_flag==True:
             if vflag:
                 print('Parsing Negative Blast results...\nExtracting Features...')
-            os.system("python bin/blastparse_mt3.py "+neg_blastres_file)
+            os.system("python "+home+"/bin/blastparse_mt3.py "+neg_blastres_file)
             if vflag:
                 print('Merging all Features...')
-            os.system("python bin/mergefeatures.py "+neg_file+"_features "+no_ff_flagval+" "+ff_featurefile_neg+" "+noblast_flag_val+" "+neg_blastres_file+"_blastfeatures "+" "+neg_file+"_all_features")
+            os.system("python "+home+"/bin/mergefeatures.py "+neg_file+"_features "+no_ff_flagval+" "+ff_featurefile_neg+" "+noblast_flag_val+" "+neg_blastres_file+"_blastfeatures "+" "+neg_file+"_all_features")
         else:
             #filename for blastres
             blastres_neg=neg_file+"_blastres"
@@ -284,25 +287,27 @@ def main(args = sys.argv):
             os.system(str(bcommand))
             if vflag:
                 print('Parsing Blast Results...')
+                print("python "+home+"/bin/blastparse_mt3.py "+blastres_neg)
 
-            os.system("python bin/blastparse_mt3.py "+blastres_neg)
+            os.system("python "+home+"/bin/blastparse_mt3.py "+blastres_neg)
             print('Merging all Features...')
-            os.system("python bin/mergefeatures.py "+neg_file+"_features "+no_ff_flagval+" "+ff_featurefile_neg+" "+noblast_flag_val+" "+blastres_neg+"_blastfeatures "+" "+neg_file+"_all_features")
+            print("python "+home+"/bin/mergefeatures.py "+neg_file+"_features "+no_ff_flagval+" "+ff_featurefile_neg+" "+noblast_flag_val+" "+blastres_neg+"_blastfeatures "+" "+neg_file+"_all_features")
+            os.system("python "+home+"/bin/mergefeatures.py "+neg_file+"_features "+no_ff_flagval+" "+ff_featurefile_neg+" "+noblast_flag_val+" "+blastres_neg+"_blastfeatures "+" "+neg_file+"_all_features")
 
     else:
         if vflag:
             print('Skipping Blast...')
         blastres_neg=neg_file+"_blastres"
         os.system("echo 'X    X    0    0    0    0    0    0    0    0' > "+blastres_neg)
-        os.system("python bin/blastparse_mt3.py "+blastres_neg)
+        os.system("python "+home+"/bin/blastparse_mt3.py "+blastres_neg)
         print('Merging all Features...')
-        os.system("python bin/mergefeatures.py "+neg_file+"_features "+no_ff_flagval+" "+ff_featurefile_neg+" "+noblast_flag_val+" "+blastres_neg+"_blastfeatures "+" "+neg_file+"_all_features")    
+        os.system("python "+home+"/bin/mergefeatures.py "+neg_file+"_features "+no_ff_flagval+" "+ff_featurefile_neg+" "+noblast_flag_val+" "+blastres_neg+"_blastfeatures "+" "+neg_file+"_all_features")    
 
 ########################################################################################################################
 ############################################Read pos file###############################################################
     if vflag:
         print('Reading Positive File...\nExtracting Features...')
-    os.system("python bin/extractfeatures.py "+pos_file+" 1")
+    os.system("python "+home+"/bin/extractfeatures.py "+pos_file+" 1")
 
     ########Run framefinder
     ff_featurefile_pos=pos_file+"_ffout_framefinderfeatures"
@@ -310,21 +315,21 @@ def main(args = sys.argv):
         print('Skipping framefinder...')
         os.system("echo '' > "+pos_file+"_ffout")
     else:
-        os.system("lib/framefinder/framefinder -r False -w lib/framefinder/framefinder.model "+pos_file+" > "+pos_file+"_ffout")
+        os.system(home+"/lib/framefinder/framefinder -r False -w "+home+"/lib/framefinder/framefinder.model "+pos_file+" > "+pos_file+"_ffout")
         #parse framefinder results and write framefinder feature files
         if vflag:
             print('Extracting Framefinder Features...')
-        os.system("python bin/ffparse.py "+pos_file+"_ffout")
+        os.system("python "+home+"/bin/ffparse.py "+pos_file+"_ffout")
 
     ######Run BLASTX########
     if noblast_flag==False:
         if pos_blastres_flag==True:
             if vflag:
                 print('Parsing Blast results...\nExtracting Features...')
-            os.system("python bin/blastparse_mt3.py "+pos_blastres_file)
+            os.system("python "+home+"/bin/blastparse_mt3.py "+pos_blastres_file)
             if vflag:
                 print('Merging all Features...')
-            os.system("python bin/mergefeatures.py "+pos_file+"_features "+no_ff_flagval+" "+ff_featurefile_pos+" "+noblast_flag_val+" "+pos_blastres_file+"_blastfeatures "+" "+pos_file+"_all_features")
+            os.system("python "+home+"/bin/mergefeatures.py "+pos_file+"_features "+no_ff_flagval+" "+ff_featurefile_pos+" "+noblast_flag_val+" "+pos_blastres_file+"_blastfeatures "+" "+pos_file+"_all_features")
         else:
             #filename for blastres
             blastres_pos=pos_file+"_blastres"
@@ -336,18 +341,18 @@ def main(args = sys.argv):
             if vflag:
                 print('Parsing Blast Results...')
 
-            os.system("python bin/blastparse_mt3.py "+blastres_pos)
+            os.system("python "+home+"/bin/blastparse_mt3.py "+blastres_pos)
             print('Merging all Features...')
-            os.system("python bin/mergefeatures.py "+pos_file+"_features "+no_ff_flagval+" "+ff_featurefile_pos+" "+noblast_flag_val+" "+blastres_pos+"_blastfeatures "+" "+pos_file+"_all_features")
+            os.system("python "+home+"/bin/mergefeatures.py "+pos_file+"_features "+no_ff_flagval+" "+ff_featurefile_pos+" "+noblast_flag_val+" "+blastres_pos+"_blastfeatures "+" "+pos_file+"_all_features")
 
     else:
         if vflag:
             print('Skipping Blast...')
         blastres_pos=pos_file+"_blastres"
         os.system("echo 'X    X    0    0    0    0    0    0    0    0' > "+blastres_pos)
-        os.system("python bin/blastparse_mt3.py "+blastres_pos)
+        os.system("python "+home+"/bin/blastparse_mt3.py "+blastres_pos)
         print('Merging all Features...')
-        os.system("python bin/mergefeatures.py "+pos_file+"_features "+no_ff_flagval+" "+ff_featurefile_pos+" "+noblast_flag_val+" "+blastres_pos+"_blastfeatures "+" "+pos_file+"_all_features")    
+        os.system("python "+home+"/bin/mergefeatures.py "+pos_file+"_features "+no_ff_flagval+" "+ff_featurefile_pos+" "+noblast_flag_val+" "+blastres_pos+"_blastfeatures "+" "+pos_file+"_all_features")    
 
     #########################################################################################################################
     #########################################Merge all features into single file#############################################
@@ -361,7 +366,7 @@ def main(args = sys.argv):
 
     if vflag:
         print('Building Model...')
-    os.system("python bin/rf/buildmodel.py "+neg_file+"_final_features "+model_name+" "+str(num_trees)+" "+str(num_threads))
+    os.system("python "+home+"/bin/rf/buildmodel.py "+neg_file+"_final_features "+model_name+" "+str(num_trees)+" "+str(num_threads))
 
     ################Remove Temp Files##################
     if removefiles_flag==True:

@@ -14,7 +14,7 @@ import getopt
 from Bio import SeqIO
 from Bio.Seq import Seq
 
-def main():
+def main(args = sys.argv,home=None):
 	#set defaults
 	cutoff=0
 	min_len=0
@@ -22,7 +22,7 @@ def main():
 	label='0'
 
 	try:
-		opts, args = getopt.getopt(sys.argv[1:],"hf:o:p:l:s:r:",["ifile=","ofile=","min=","max="])
+		opts, args = getopt.getopt(sys.argv[2:],"hf:o:p:l:s:r:",["ifile=","ofile=","min=","max="])
 		#print opts
 	except getopt.GetoptError:
 		print('predstoseq.py -f <input fastafile> -o <outputfile> -p <predictionfile> -l <required label default:0> -s <class_prob_cutoff, default:0> -m <min_length, default:0> <max_length, default:inf>')
