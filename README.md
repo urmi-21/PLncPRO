@@ -25,12 +25,15 @@ Singh et. al. PLncPRO for prediction of long non-coding RNAs (lncRNAs) in plants
 ## Pre-requisite: 
 1. OS: Linux, macOS
 2. Python 3.5 or later versions (http://www.python.org/)
-	a.)NumPy (http://www.numpy.org/)
-	b.)SciPy (https://www.scipy.org/)
-	c.)Scikit-learn (http://scikit-learn.org/)
-	d.)Biopython (http://biopython.org/)
 3. NCBI BLAST (https://blast.ncbi.nlm.nih.gov/Blast.cgi)
 4. GNU C Library (glibc >= 2.14)
+
+## python dependencies
+1. NumPy (http://www.numpy.org/) 
+2. SciPy (https://www.scipy.org/)
+3. Scikit-learn (http://scikit-learn.org/) 
+4. Biopython (http://biopython.org/)
+5. regex
 
 ## Using PIP
 ```
