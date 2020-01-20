@@ -10,6 +10,10 @@ python:
 install:
   - pip install -r requirements.txt
   #- pip install .
+  #install blast
+  - wget ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.10.0+-x64-linux.tar.gz -O /tmp/blast.tar.gz
+  - tar -xvzf /tmp/blast.tar.gz
+  - export PATH=$PATH:$PWD/ncbi-blast-2.10.0+/bin/
 
 before_script:
   - curl -L "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/shunit2/shunit2-2.1.6.tgz" | tar zx
