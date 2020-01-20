@@ -19,6 +19,7 @@ We comprehensively tested our method on plants and vertebrates and found that ou
 ## Citation
 Singh et. al. PLncPRO for prediction of long non-coding RNAs (lncRNAs) in plants and its application for discovery of abiotic stress-responsive lncRNAs in rice and chickpea. Nucleic Acids Res. 2017 Dec 15;45(22):e183. doi: 10.1093/nar/gkx866.
 
+#### NOTE: We have updated for python3. PlncPro for python2 is also available at http://ccbb.jnu.ac.in/plncpro/. The usage for this newer version is different from the older versions.
 
 #  INSTALLATION
 
