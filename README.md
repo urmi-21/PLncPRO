@@ -52,6 +52,8 @@ bash tests/local_test.sh
 
 # Basic Usage
 
+See [examples]() for detailed usage examples.
+
 ### `plncpro predict` 
 
 Label lncRNAs and mRNAs. This file reads an input
@@ -125,14 +127,15 @@ plncpro build -p <mrna fasta> -n <lncrna fasta> -o <out_dir> -m <model_name> -d 
 
 
 
-Usage of predtoseq.py -- used to extract mRNA or lncRNA sequences from
+### plncpro predtoseq
+Extract mRNA or lncRNA sequences from
 PLNCPRO output file. This file reads a prediction output file and
 extracts sequences from a given class. User can specify class and
 probability cut-off and extract desired transcript sequences.
 
 
 ```
-python predtoseq.py -f fasta_file -o outputfile -p PLNCPRO_prediction_file -l required_label 
+plncpro predtoseq -f <fasta_file> -o <outputfile> -p <PLNCPRO_prediction_file> -l <required_label>
 ```
   		
 ### PARAMETERS
