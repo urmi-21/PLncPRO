@@ -32,10 +32,24 @@ Singh et. al. PLncPRO for prediction of long non-coding RNAs (lncRNAs) in plants
 3. NCBI BLAST (https://blast.ncbi.nlm.nih.gov/Blast.cgi)
 4. GNU C Library (glibc >= 2.14)
 
-## Steps:
+## Using PIP
+```
+pip install plncpro
+```
 
+## From source
 
-  
+```
+git clone https://github.com/urmi-21/PLncPRO.git
+pip install PlncPro
+```
+
+## Run tests
+
+```
+bash tests/local_test.sh
+```
+
 #  USAGE AND EXAMPLES
 
 Usage of prediction.py -- To label lncRNAs and mRNAs. This file reads an input

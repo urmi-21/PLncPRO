@@ -6,4 +6,4 @@ Created on Sun Jan 19 18:30:16 2020
 @author: usingh
 """
 
-__version__="0.1.2"
+__version__="1.2"

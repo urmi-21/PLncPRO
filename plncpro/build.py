@@ -51,11 +51,7 @@ def printhelp():
 
 
 def main(args = sys.argv,home=None):
-    if home==None:
-        print("ERROR HOME")
-    print("HOME="+home)
-    print("ARGS::"+str(args))
-    print("os::"+str(os.getcwd()))
+    
     ######################################
 
     ############Define variables##############
