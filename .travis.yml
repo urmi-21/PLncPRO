@@ -9,7 +9,7 @@ python:
 # install dependencies
 install:
   #- pip install -r requirements.txt
-  - pip install PlncPro
+  - pip install urmi-21/PLncPRO/
   #install blast
   - wget ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.10.0+-x64-linux.tar.gz -O /tmp/blast.tar.gz
   - tar -xvzf /tmp/blast.tar.gz
