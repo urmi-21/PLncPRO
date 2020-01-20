@@ -155,6 +155,15 @@ plncpro predtoseq -f <fasta_file> -o <outputfile> -p <PLNCPRO_prediction_file> -
 ```
 
 
+# Download data used in paper
+
+Data is hosted on google drive. [Direct link](https://drive.google.com/file/d/108S-9Bt4CLCHTaCn6-HKTqQZDo0nssZe/view)
+
+Directly download using wget.
+```
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=108S-9Bt4CLCHTaCn6-HKTqQZDo0nssZe' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=108S-9Bt4CLCHTaCn6-HKTqQZDo0nssZe" -O plncpro_data.zip && rm -rf /tmp/cookies.txt
+```
+
 
 # COPYING
 
