@@ -1,0 +1,2 @@
+include plncpro/lib/framefinder/framefinder
+include plncpro/lib/framefinder/framefinder.model
