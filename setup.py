@@ -22,7 +22,7 @@ with open("README.md", "r") as fh:
 #read version info
 cwd =os.path.abspath(os.path.dirname("__file__"))
 version = {}
-with open(os.path.join(cwd, "version.py")) as fp:
+with open(os.path.join(cwd, "plncpro", "version.py")) as fp:
     exec(fp.read(), version)
 version = version["__version__"]
 
