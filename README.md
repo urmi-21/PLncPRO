@@ -56,7 +56,7 @@ bash tests/local_test.sh
 
 # Basic Usage
 
-See [examples]() for detailed usage examples.
+See [examples](https://github.com/urmi-21/PLncPRO/tree/master/examples) for detailed usage examples.
 
 ### `plncpro predict` 
 
