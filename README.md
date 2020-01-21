@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/urmi-21/PLncPRO.svg?branch=master)](https://travis-ci.org/urmi-21/PLncPRO)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/plncpro)
 ![PyPI - Downloads](https://img.shields.io/pypi/dd/plncpro)
-
+[![publication](https://img.shields.io/badge/publication-NAR-blue)](https://academic.oup.com/nar/article/45/22/e183/4282667)
                           _____  _            _____  _____   ____  
                          |  __ \| |          |  __ \|  __ \ / __ \ 
                          | |__) | |_ __   ___| |__) | |__) | |  | |
