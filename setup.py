@@ -20,21 +20,22 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 #read version info
-cwd =os.path.abspath(os.path.dirname("__file__"))
-version = {}
-with open(os.path.join(cwd, "plncpro", "version.py")) as fp:
-    exec(fp.read(), version)
-version = version["__version__"]
+#cwd =os.path.abspath(os.path.dirname("__file__"))
+#version = {}
+#with open(os.path.join(cwd, "plncpro", "version.py")) as fp:
+#    exec(fp.read(), version)
+#version = version["__version__"]
 
-if version is None:
-    print("Error: version is missing. Exiting...", file=sys.stderr)
-    sys.exit(1)
+#if version is None:
+#    print("Error: version is missing. Exiting...", file=sys.stderr)
+#    sys.exit(1)
 
 
 
 setuptools.setup(
     name="plncpro",
-    version=version,
+    #version=version,
+    version=open("plncpro/_version.py").readlines()[-1].split()[-1].strip("\"'"),
     author="Urminder Singh",
     author_email="usingh@iastate.edu",
     description="PlncPRO (Plant Long Non-Coding rna Prediction by Random fOrests) is a program to classify coding (mRNAs) and long non-coding transcripts (lncRNAs).",
