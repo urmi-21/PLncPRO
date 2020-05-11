@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/urmi-21/PLncPRO.svg?branch=master)](https://travis-ci.org/urmi-21/PLncPRO)
-[![install with bioconda](https://img.shields.io/badge/install%20with-bioconda-brightgreen.svg?style=flat-square)](https://anaconda.org/bioconda/plncpro)
+[![install with bioconda](https://anaconda.org/bioconda/plncpro/badges/installer/conda.svg)](https://anaconda.org/bioconda/plncpro)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/plncpro)
 [![publication](https://img.shields.io/badge/publication-NAR-blue)](https://academic.oup.com/nar/article/45/22/e183/4282667)
 
