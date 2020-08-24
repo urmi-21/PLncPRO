@@ -162,6 +162,18 @@ plncpro predtoseq -f <fasta_file> -o <outputfile> -p <PLNCPRO_prediction_file> -
 --max			specifiy min_length of sequences[default:Inf]
 ```
 
+### Using Diamond instead of blastx
+
+Diamond is several folds faster than blastx and could be used instead of blastx. To use diamond with plncpro, first run diamond using following output parameters:
+
+```
+diamond blastx -d <diamondDB> -q <query.fasta> -o <diamond_out> --outfmt 6 qseqid sseqid pident evalue nident qcovhsp score bitscore qframe qstrand
+```
+Then pass the diamond output using the `--blastres` parameter to plncpro, e.g.:
+
+```
+plncpro predict -i <input.fasta> -o <outfile> -p <preds> --blastres <diamond_out> -m <model> 
+```
 
 # Download data used in paper
 
