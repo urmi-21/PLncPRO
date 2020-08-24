@@ -162,7 +162,7 @@ plncpro predtoseq -f <fasta_file> -o <outputfile> -p <PLNCPRO_prediction_file> -
 --max			specifiy min_length of sequences[default:Inf]
 ```
 
-### Using Diamond instead of blastx
+## Using Diamond instead of blastx
 
 Diamond is several folds faster than blastx and could be used instead of blastx. To use diamond with plncpro, first run diamond using following output parameters:
 
