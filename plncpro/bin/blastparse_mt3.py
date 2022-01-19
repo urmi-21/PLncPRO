@@ -15,7 +15,8 @@ UrMi 5/2/16
 import sys
 import math
 import re
-import threading
+#import threading
+import multiprocess as mp
 from collections import OrderedDict
 import queue
 import urllib.request, urllib.error, urllib.parse
@@ -66,7 +67,8 @@ def getentropy(a,b,c):
 	#print -1*((pa*getlog2(pa))+(pb*getlog2(pb))+(pc*getlog2(pc)))
 	return -1*((pa*getlog2(pa))+(pb*getlog2(pb))+(pc*getlog2(pc)))
 
-class BlastParse(threading.Thread):
+#$class BlastParse(threading.Thread):
+class BlastParse(mp.Process):
 	def __init__(self,data,ids):
         	super(BlastParse, self).__init__()
         	self.data=data
@@ -91,7 +93,7 @@ class BlastParse(threading.Thread):
 					qframe=int(line.split('\t')[8])
 					#print 'q   qframe'
 					#print q,str(qframe)
-					
+
 					ctr=ctr+1
 					hitscore=hitscore+(-1*getlog10(evalue))
 					bitscore=bitscore+float(line.split('\t')[7])
@@ -101,14 +103,14 @@ class BlastParse(threading.Thread):
 						frame2=frame2+1
 					elif(qframe==3):
 						frame3=frame3+1
-					
+
 			#print q,':',str(ctr)
 			#self.reslist.append(str(q)+'~'+str(ctr))
 			#hitscore=hitscore/ctr
 			#self.reslist.append([str(q),ctr])
-			#print q,str(frame1),str(frame2),str(frame3),str(qcov)			
-			self.reslist.append([str(q),ctr,hitscore,frame1,frame2,frame3,bitscore])			
-			
+			#print q,str(frame1),str(frame2),str(frame3),str(qcov)
+			self.reslist.append([str(q),ctr,hitscore,frame1,frame2,frame3,bitscore])
+
 
 def joinresults(l):
 	#print l
@@ -117,9 +119,9 @@ def joinresults(l):
 		for y in x:
 			#print y[0]
 			all_qids.append(y[0])
-			
+
 	#remove duplicates
-	all_qids=list(OrderedDict.fromkeys(all_qids))	
+	all_qids=list(OrderedDict.fromkeys(all_qids))
 	#print all_qids
 	numhits=[]
 	hit_scores=[]
@@ -139,7 +141,7 @@ def joinresults(l):
 		for x in l:
 			foundflag=0
 			for y in x:
-				
+
 				if q==y[0]:
 					#print 'here'
 					#print y[1]
@@ -175,7 +177,9 @@ numhits=[] #number of hits per query
 ##divide the blast file (content) and do multithreading
 #print len(content)
 #N=len(content)/500
-N=10
+N=1
+if len(sys.argv) == 2
+	N=sys.argv[2]
 c=split_list(content,N )
 #extract queryids for each sublist i.e. c[i]
 qids=[]
@@ -186,7 +190,7 @@ for x in c:
 	#remove duplicates
 	q=list(OrderedDict.fromkeys(q))
 	qids.append(q)
-	
+
 #print 'final qids'
 #print qids
 
@@ -199,6 +203,7 @@ for i in range(len(c)):
 	# (i) does not make a sequence, so (i,)
 	#t = threading.Thread(target=countnumhits(c[i],qids[i]), args=(i,))
 	t=BlastParse(c[i],qids[i])
+	#t=mp.Process(target=BlastParse,args=[c[i],qids[i]])
 	#print t
 	# Sticks the thread in a list so that it remains accessible
 	thread_list.append(t)

@@ -10,7 +10,7 @@ PLNCPRO
 Author : Urminder Singh
 email: urmind13_sit@jnu.ac.in
 UrMi 21/4/16
-''' 
+'''
 import sys, getopt
 import os
 from Bio import SeqIO
@@ -22,6 +22,7 @@ def printhelp():
     print ("This script classifies transcripts as coding or non coding transcripts")
     print ("Arguments:")
     print ("-h     print this message")
+    print ("-f     overwrite existing results")
     print ("-p     output file name to store prediction results")
     print ("-i     path to file containing input sequences")
     print ("-m     path to the model file")
@@ -31,22 +32,23 @@ def printhelp():
     print ("-t     number of threads[default: 4]")
     print ("-l     path to the files containg labels(this outputs performance of the classifier)")
     print ("-r     clean up intermediate files")
-    print ("-v     show more messages")    
+    print ("-v     show more messages")
     print ("--min_len     specifiy min_length to filter input files")
     print ("--noblast     Don't use blast features")
     print ("--no_ff     Don't use framefinder features")
     print ("--qcov_hsp     specify qcov parameter for blast[default:30]")
     print ("--blastres     path to blast output for input file")
-    
-    
+
+
 def main(args = sys.argv,home=None):
-    
-    
+
+
     ######################################
     ############Define variables##############
     in_flag=False
     out_flag=False
     db_flag=False
+    force_flag=False
     model_flag=False
     removefiles_flag=False
     noblast_flag=False
@@ -74,7 +76,7 @@ def main(args = sys.argv,home=None):
     label_file=""
     #####################################
     try:
-        opts, args = getopt.getopt(sys.argv[2:],"ht:i:rm:p:o:d:vl:",["prediction_out=","infile=","noblast","no_ff","qcov_hsp=","threads=","db=","outdir=","model=","remove_temp","blastres=","labels=","min_len="])
+        opts, args = getopt.getopt(sys.argv[2:],"fht:i:rm:p:o:d:vl:",["prediction_out=","infile=","noblast","no_ff","qcov_hsp=","threads=","db=","outdir=","model=","remove_temp","force","blastres=","labels=","min_len="])
     except getopt.GetoptError:
         printhelp()
         sys.exit(2)
@@ -89,6 +91,8 @@ def main(args = sys.argv,home=None):
             out_file_flag=True
             #print (out_file)
             #print arg
+        elif opt in ("-f", "--force"):
+            force_flag=True
         elif opt in ("-i", "--infile"):
             #print 'neg found'
             in_file=os.path.abspath(arg)
@@ -146,7 +150,7 @@ def main(args = sys.argv,home=None):
             #print 'ml found'
             min_length=int(arg)
             min_len_flag=True
-    
+
 
     ###Check all necessary inputs
 
@@ -210,13 +214,13 @@ def main(args = sys.argv,home=None):
                 #print 'writing',record.id
             else:
                 short_ctr=short_ctr+1
-    
+
         SeqIO.write(temp_rec, output_handle, "fasta")
         output_handle.close()        #important else gives errors
-    
+
         print(('Short Sequences <',str(min_length),str(short_ctr),' removed,',str(ctr),' retained'))
         in_file=in_file+'_temp_'+str(min_length)
-        print ('New file with filtered sequences:')    
+        print ('New file with filtered sequences:')
         print (in_file)
 
 
@@ -224,8 +228,10 @@ def main(args = sys.argv,home=None):
 ############################################Read in file###############################################################
     if vflag:
         print ('Reading Input File...\nExtracting Features...')
-    
-    os.system("python "+home+"/bin/extractfeatures.py "+in_file+" 1")
+    okfile=outdir+"/features.ok"
+    if not os.path.exists(okfile) or force_flag :
+        os.system("python "+home+"/bin/extractfeatures.py "+in_file+" 1")
+        with open(okfile, mode="w"): pass
 
     ########Run framefinder
     ff_featurefile_pos=in_file+"_ffout_framefinderfeatures"
@@ -235,25 +241,35 @@ def main(args = sys.argv,home=None):
 
     else:
         #print "lib/framefinder/framefinder -r False -w lib/framefinder/framefinder.model "+in_file+" > "+in_file+"_ffout"
-        os.system(home+"/lib/framefinder/framefinder -r False -w "+home+"/lib/framefinder/framefinder.model "+in_file+" > "+in_file+"_ffout")
+        okfile=outdir+"/ffout.ok"
+        if not os.path.exists(okfile) or force_flag :
+            os.system(home+"/lib/framefinder/framefinder -r False -w "+home+"/lib/framefinder/framefinder.model "+in_file+" > "+in_file+"_ffout")
+        with open(okfile, mode="w"): pass
+
         #parse framefinder results and write framefinder feature files
         if vflag:
             print ('Extracting Framefinder Features...')
-        os.system("python "+home+"/bin/ffparse.py "+in_file+"_ffout")
+        okfile=outdir+"/ffout_features.ok"
+        if not os.path.exists(okfile) or force_flag :
+            os.system("python "+home+"/bin/ffparse.py "+in_file+"_ffout")
+            with open(okfile, mode="w"): pass
 
     ######Run BLASTX########
     if noblast_flag==False:
         if blastres_flag==True:
             if vflag:
                 print ('Parsing Blast results...\nExtracting Features...')
-                
-            os.system("python "+home+"/bin/blastparse_mt3.py "+blastres_file)
-            
+            okfile=outdir+"/blast_features.ok"
+            if not os.path.exists(okfile) or force_flag :
+                os.system("python "+home+"/bin/blastparse_mt3.py "+blastres_file+" "+str(num_threads))
+                with open(okfile, mode="w"): pass
             if vflag:
                 print ('Merging all Features...')
-                
-            os.system("python "+home+"/bin/mergefeatures.py "+in_file+"_features "+no_ff_flagval+" "+ff_featurefile_pos+" "+noblast_flag_val+" "+blastres_file+"_blastfeatures "+" "+in_file+"_all_features")
-            
+            okfile=outdir+"/blast_merge.ok"
+            if not os.path.exists(okfile) or force_flag :
+                os.system("python "+home+"/bin/mergefeatures.py "+in_file+"_features "+no_ff_flagval+" "+ff_featurefile_pos+" "+noblast_flag_val+" "+blastres_file+"_blastfeatures "+" "+in_file+"_all_features")
+                with open(okfile, mode="w"): pass
+
         else:
             #filename for blastres
             blastres_pos=in_file+"_blastres"
@@ -264,38 +280,52 @@ def main(args = sys.argv,home=None):
             os.system(str(bcommand))
             if vflag:
                 print ('Parsing Blast Results...')
-
-            os.system("python "+home+"/bin/blastparse_mt3.py "+blastres_pos)
+            okfile=outdir+"/blast_features.ok"
+            if not os.path.exists(okfile) or force_flag :
+                os.system("python "+home+"/bin/blastparse_mt3.py "+blastres_pos+" "+str(num_threads))
+                with open(okfile, mode="w"): pass
             print ('Merging all Features...')
-            os.system("python "+home+"/bin/mergefeatures.py "+in_file+"_features "+no_ff_flagval+" "+ff_featurefile_pos+" "+noblast_flag_val+" "+blastres_pos+"_blastfeatures "+" "+in_file+"_all_features")
+
+            okfile=outdir+"/blast_merge.ok"
+            if not os.path.exists(okfile) or force_flag :
+                os.system("python "+home+"/bin/mergefeatures.py "+in_file+"_features "+no_ff_flagval+" "+ff_featurefile_pos+" "+noblast_flag_val+" "+blastres_pos+"_blastfeatures "+" "+in_file+"_all_features")
+                with open(okfile, mode="w"): pass
 
     else:
         if vflag:
             print ('Skipping Blast...')
         blastres_pos=in_file+"_blastres"
         os.system("echo 'X    X    0    0    0    0    0    0    0    0' > "+blastres_pos)
-        os.system("python "+home+"/bin/blastparse_mt3.py "+blastres_pos)
+        os.system("python "+home+"/bin/blastparse_mt3.py "+blastres_pos+" "+str(num_threads))
         print ('Merging all Features...')
-        os.system("python "+home+"/bin/mergefeatures.py "+in_file+"_features "+no_ff_flagval+" "+ff_featurefile_pos+" "+noblast_flag_val+" "+blastres_pos+"_blastfeatures "+" "+in_file+"_all_features")    
+        okfile=outdir+"/blast_merge.ok"
+        if not os.path.exists(okfile) or force_flag :
+            os.system("python "+home+"/bin/mergefeatures.py "+in_file+"_features "+no_ff_flagval+" "+ff_featurefile_pos+" "+noblast_flag_val+" "+blastres_pos+"_blastfeatures "+" "+in_file+"_all_features")    
+            with open(okfile, mode="w"): pass
+
 
 #########################################################################################################################
 ##############################################Start prediction###########################################################
 ##mergeboth files in one
     if vflag:
         print ('Predicting...')
-        
+
     print((str("python "+home+"/bin/rf/predict.py "+in_file+"_all_features "+model_file+" "+out_file+" "+lflag_val+" "+label_file)))
-    os.system("python "+home+"/bin/rf/predict.py "+in_file+"_all_features "+model_file+" "+out_file+" "+lflag_val+" "+label_file)
+    okfile=outdir+"/prediction.ok"
+    if not os.path.exists(okfile) or force_flag :
+        os.system("python "+home+"/bin/rf/predict.py "+in_file+"_all_features "+model_file+" "+out_file+" "+lflag_val+" "+label_file)
+        with open(okfile, mode="w"): pass
 
 ################Remove Temp Files##################
     if removefiles_flag==True:
         print ('Removing temp files...')
         #print "rm -f "+in_file+"_ffout_framefinderfeatures"
         os.system("rm -f "+in_file+"_ffout_framefinderfeatures")
-        os.system("rm -f "+in_file+"_blastres_blastfeatures")
+        if not blastres_flag :
+            os.system("rm -f "+in_file+"_blastres_blastfeatures")
         os.system("rm -f "+in_file+"_features")
         os.system("rm -f "+in_file+"_ffout")
-        if min_len_flag==True:    
+        if min_len_flag==True:
             os.system("rm -f "+in_file)
 
 #########################################Move files to out_dir##########################################
@@ -303,16 +333,16 @@ def main(args = sys.argv,home=None):
     if not os.path.exists(outdir):
         os.makedirs(outdir)
     os.system("mv "+in_file+"_all_features"+" "+outdir+"/")
-    os.system("mv "+in_file+"_blastres"+" "+outdir)
+    if not blastres_flag :
+        os.system("mv "+in_file+"_blastres"+" "+outdir)
     os.system("mv "+out_file+" "+outdir)
 
     print(('All outputs saved to: '+ outdir))
     print ('END')
-    
-    
-    
-    
+
+
+
+
 if __name__ == "__main__":
     main()
-    
-    
+
